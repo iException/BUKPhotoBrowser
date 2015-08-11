@@ -1,0 +1,6 @@
+framework module SDWebImage {
+  umbrella header "Pods-BUKPhotoBrowser_Tests-SDWebImage-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module BUKPhotoBrowser {
+  umbrella header "Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser-umbrella.h"
+
+  export *
+  module * { export * }
+}

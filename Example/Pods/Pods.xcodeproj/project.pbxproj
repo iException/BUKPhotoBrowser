@@ -1,0 +1,1559 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01EAA4E3538E7806333A6D36 /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F562EBA04EEF0D71C384B61 /* SDWebImageCompat.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		034A073C2A4066095CA90E1C /* SDImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = A3F58DB96D2370F0993D1DFE /* SDImageCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		092C5AC179F600FFE7A4AAC7 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B87D1A8DE6C97D3CCD356848 /* SDWebImage.framework */; };
+		09D0B7B0800A37D3EF6DAD91 /* SDWebImageCompat.h in Headers */ = {isa = PBXBuildFile; fileRef = AE008F3FD4E214706EBCCEBE /* SDWebImageCompat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A0AB8853F0490C0FC8B76F4 /* SDWebImagePrefetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 43F2A61A6DA848136F6F0788 /* SDWebImagePrefetcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B42EE84501A1B8D327E0441 /* UIImage+MultiFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 727D540DEE08CA2A7032B22B /* UIImage+MultiFormat.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0C3044A6342C8AE0013D0EA2 /* BUKPhotoBrowser.h in Headers */ = {isa = PBXBuildFile; fileRef = 59619ACF734AF48C7341997D /* BUKPhotoBrowser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E8AB988246C310BAEF26093 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FED7F16BE7F12F08B78D3A47 /* Foundation.framework */; };
+		0F4F0269BB2B56235D57163C /* SDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = A9FDE6C6E96E8E72501EE5AF /* SDWebImageDownloader.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		10B2B0B23CED099409553AD3 /* UIView+WebCacheOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = F4700155356B1EDF01DDBD36 /* UIView+WebCacheOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12DD0563A0BA283A53758112 /* SDWebImageDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 058A8D3A7412CDA0DA0B8493 /* SDWebImageDecoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		23C6DDB1F587C3CAFC594037 /* UIImage+MultiFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = 6909B93668337B1AC67BEC8A /* UIImage+MultiFormat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		276702561C00040FD612F471 /* SDWebImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD09F2896781E91BC1609C1 /* SDWebImageDecoder.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		27F38CC4B0B4CD1DFA68F720 /* SDWebImageDownloaderOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = D9664F839202CEFCDB98EF6E /* SDWebImageDownloaderOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		29E960BB2C1C58B7F95936D6 /* UIImage+MultiFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 727D540DEE08CA2A7032B22B /* UIImage+MultiFormat.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		2A50BCFD4C00038C014318F1 /* Pods-BUKPhotoBrowser_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E273190C523E952E7B45931D /* Pods-BUKPhotoBrowser_Tests-dummy.m */; };
+		2FCB106BA85BA56420DE6511 /* BUKPhoto.h in Headers */ = {isa = PBXBuildFile; fileRef = 635A939CA8F45215F34BAC06 /* BUKPhoto.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		328CD5D7A9310801625A6F12 /* SDWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DAA53E9A34DFB64EEFB9E39 /* SDWebImageManager.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		34A79CBB713AA36A34D8C255 /* BUKPhotoBrowser.h in Headers */ = {isa = PBXBuildFile; fileRef = 59619ACF734AF48C7341997D /* BUKPhotoBrowser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3727DE966D3EA5174CBFA220 /* SDWebImageOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B7591B2F0A8288BD7FF03E7 /* SDWebImageOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		382C02FDC318EE6B4C6EB376 /* SDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = A9FDE6C6E96E8E72501EE5AF /* SDWebImageDownloader.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		39DF76F7DB94354646DF6562 /* UIImage+GIF.h in Headers */ = {isa = PBXBuildFile; fileRef = CBAA78A2A3E6E443E5852515 /* UIImage+GIF.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A6414AACFA970CB7D02E1F3 /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 914EC94D8C7EF620BCA5DDDD /* SDImageCache.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		3C9A9F80545D8CC5B9FC19EE /* UIImageView+HighlightedWebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = BDF02AD9462AC7BD44B4DE5F /* UIImageView+HighlightedWebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		44BD5035E8B898C253F2A946 /* BUKPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 506F2AED93A090F89E522A09 /* BUKPhotoBrowser.m */; };
+		481352C145BF26C2B639A5F7 /* Pods-BUKPhotoBrowser_Example-SDWebImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 826972E3AD1C5C41D5B586DB /* Pods-BUKPhotoBrowser_Example-SDWebImage-dummy.m */; };
+		48D55E0E5E3198F6378A84DE /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 698101190320332956A54273 /* SDWebImagePrefetcher.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		4BBF79A890F2566C8D9619E1 /* Pods-BUKPhotoBrowser_Tests-SDWebImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FBB431F85EE899A3A9B3CF0 /* Pods-BUKPhotoBrowser_Tests-SDWebImage-dummy.m */; };
+		4C2A8E72B9C2026D1A2ACFB4 /* SDWebImageDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F7A87D1DD32E53A5859F985 /* SDWebImageDownloader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C9C68E8987BE2E70D5AD7EA /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B87D1A8DE6C97D3CCD356848 /* SDWebImage.framework */; };
+		4CFAA3F56667A7833A20FF3D /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC796CC2304A78FA7F0A628 /* NSData+ImageContentType.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		4D01E017372FE3BBFB2DC574 /* UIButton+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A90980F61ADB65994F08EEA /* UIButton+WebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D851E1D629175A0CEA6A3BF /* Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 767341B698B256A275BA724B /* Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		51110E4B20426405355FFE29 /* SDWebImageOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B7591B2F0A8288BD7FF03E7 /* SDWebImageOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		549F56BEFA4E53E32A9FB715 /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 698101190320332956A54273 /* SDWebImagePrefetcher.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		59523F1A93F69CEF250473A7 /* Pods-BUKPhotoBrowser_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF9F25CC80E882B7A013F67 /* Pods-BUKPhotoBrowser_Example-dummy.m */; };
+		5BE84D7660ADB24D03B74BC7 /* Pods-BUKPhotoBrowser_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E65B8146171457BE935CD71C /* Pods-BUKPhotoBrowser_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5DE50AD8BA98F1FF620E0B1C /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = DE267DFD287F65B1952E3F35 /* UIImageView+HighlightedWebCache.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		5E7AD7275920C27ED6F50C50 /* BUKPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DB7212D7654255AF883E3E /* BUKPhoto.m */; };
+		621E4DB22EA18649CFFC9C8B /* UIView+WebCacheOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = F4700155356B1EDF01DDBD36 /* UIView+WebCacheOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		667296EA720E6C4CA8986F99 /* Pods-BUKPhotoBrowser_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D95BFAA851D387239111E9EF /* Pods-BUKPhotoBrowser_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D7A91FB6B3E1B6DB9BF26F0 /* Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F5F3BAD435D0592E2CA58D /* Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser-dummy.m */; };
+		716A30CE525FEDBE4E8BBEE8 /* UIButton+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A90980F61ADB65994F08EEA /* UIButton+WebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		787AF9EDA8BC6CD4A27C9540 /* SDImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = A3F58DB96D2370F0993D1DFE /* SDImageCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		79A816515C2CFCB8BEB3E6CA /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10585AE16BD46AB10F9FB543 /* ImageIO.framework */; };
+		80A5A314EB5B2D357B94C5B8 /* BUKPhotoBrowser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 67F7F7C91526305E57A15D45 /* BUKPhotoBrowser.bundle */; };
+		8144B3B79F6B3C3BE1058CC3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FED7F16BE7F12F08B78D3A47 /* Foundation.framework */; };
+		83CB333850826B7EE67F58A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FED7F16BE7F12F08B78D3A47 /* Foundation.framework */; };
+		85D46D41C7A025F0B03EAF4C /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = CC22F6CF3B6B1D4EA1CF7387 /* UIImage+GIF.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		879889B2B6B9D8F5B91EA071 /* Pods-BUKPhotoBrowser_Tests-SDWebImage-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 233FE718CB9D656B9C53C18C /* Pods-BUKPhotoBrowser_Tests-SDWebImage-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8996D803286EF82A5F744FAD /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB4D76018363F43FE2A4812 /* UIView+WebCacheOperation.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		8B0272A5D6CB6DE1D4338CE7 /* NSData+ImageContentType.h in Headers */ = {isa = PBXBuildFile; fileRef = 37A3E0E5419B091E296BCF50 /* NSData+ImageContentType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B7B1282259C1207330D4152 /* Pods-BUKPhotoBrowser_Example-SDWebImage-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 16F5A5D2574095CB030DDD3F /* Pods-BUKPhotoBrowser_Example-SDWebImage-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		929A39DC7E572505CDF1CA42 /* SDWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DAA53E9A34DFB64EEFB9E39 /* SDWebImageManager.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		940C51B75E0D948556C17C0F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FED7F16BE7F12F08B78D3A47 /* Foundation.framework */; };
+		9598E27B0868A087C2874569 /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B37B7C334122AC2171954F1 /* UIButton+WebCache.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		960CB271E4FF40BB1C0765E0 /* NSData+ImageContentType.h in Headers */ = {isa = PBXBuildFile; fileRef = 37A3E0E5419B091E296BCF50 /* NSData+ImageContentType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9645DF44DE4196DCFF2947D3 /* BUKPhotoView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EF6389B319C7E16FD41FFFF /* BUKPhotoView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		969746CE3622FA7A709CCF43 /* BUKPhotoBrowser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2F630E5DEBB280E7DF304C30 /* BUKPhotoBrowser.bundle */; };
+		969A9A2CE648F02A9B9F4C10 /* Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B3AAF59D424FFD1C5389920 /* Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9872FFEE041CFE17C36F2778 /* SDWebImageDownloaderOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = D9664F839202CEFCDB98EF6E /* SDWebImageDownloaderOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A8B9095F377D87383FEBC908 /* SDWebImageDownloaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = FF261A04B9EDC132B6E83FA0 /* SDWebImageDownloaderOperation.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		A995165246976D49DB35E6C7 /* SDWebImagePrefetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 43F2A61A6DA848136F6F0788 /* SDWebImagePrefetcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AECC351ABA1FD27E62E8F2C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FED7F16BE7F12F08B78D3A47 /* Foundation.framework */; };
+		B0F009160DA84B7C32F80127 /* BUKPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 519B3255A5E58CB8490D2BF2 /* BUKPhotoView.m */; };
+		B0F34FBF6BBDE2C3C85AF01A /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B37B7C334122AC2171954F1 /* UIButton+WebCache.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		B779326A91B1B3E7FD2F1386 /* BUKPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 506F2AED93A090F89E522A09 /* BUKPhotoBrowser.m */; };
+		B78E2BDC9741C95DD6394FF0 /* BUKPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DB7212D7654255AF883E3E /* BUKPhoto.m */; };
+		B81CEEBF68BF99ED53F8A3B4 /* SDWebImageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EBD86B12C10600CA869305F /* SDWebImageManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD338385DBB366D66E180FD5 /* BUKPhotoView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EF6389B319C7E16FD41FFFF /* BUKPhotoView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C41BEE675FC5D6A07E0D95F0 /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F562EBA04EEF0D71C384B61 /* SDWebImageCompat.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		CD71C887E2465E1BFFA83813 /* SDWebImageDownloaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = FF261A04B9EDC132B6E83FA0 /* SDWebImageDownloaderOperation.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		CFCC8EF356F14A929CA9F680 /* Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 43ADD047AF83D1CC5C374F8D /* Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser-dummy.m */; };
+		D3AF74FC9423F9B5028400AC /* UIImage+GIF.h in Headers */ = {isa = PBXBuildFile; fileRef = CBAA78A2A3E6E443E5852515 /* UIImage+GIF.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4B3C33F453F8788D51F3356 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC796CC2304A78FA7F0A628 /* NSData+ImageContentType.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D7522547F77E6112E412904C /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C691872AE7ABDFB98989F13 /* UIImageView+WebCache.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		DAD9AFBE26A2E28D68F1F466 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10585AE16BD46AB10F9FB543 /* ImageIO.framework */; };
+		DE59BA5E0E75A41F71BA367A /* UIImageView+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = A236CB7F5C7A15D312D6C237 /* UIImageView+WebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DF4CA412D38EAA3EB52A341D /* SDWebImageCompat.h in Headers */ = {isa = PBXBuildFile; fileRef = AE008F3FD4E214706EBCCEBE /* SDWebImageCompat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E12234E09D8E45F073CDA5A6 /* SDWebImageDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 058A8D3A7412CDA0DA0B8493 /* SDWebImageDecoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E1DB41D6C02020BB85C6125F /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 914EC94D8C7EF620BCA5DDDD /* SDImageCache.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E6AADDBF87AD73BAB6C5BC58 /* UIImageView+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = A236CB7F5C7A15D312D6C237 /* UIImageView+WebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC01BDA7D46B86EB02F6ED61 /* SDWebImageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EBD86B12C10600CA869305F /* SDWebImageManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC4FFE479A15A7CACFF4EF88 /* SDWebImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD09F2896781E91BC1609C1 /* SDWebImageDecoder.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		ECBB1E2B342BCC54749EDA3B /* UIImageView+HighlightedWebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = BDF02AD9462AC7BD44B4DE5F /* UIImageView+HighlightedWebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECDDB9E95BF9D8BC40C20DB2 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = DE267DFD287F65B1952E3F35 /* UIImageView+HighlightedWebCache.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F072401BCD95520BA37E2A62 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FED7F16BE7F12F08B78D3A47 /* Foundation.framework */; };
+		F0E6278DAA85E3F8C256E967 /* SDWebImageDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F7A87D1DD32E53A5859F985 /* SDWebImageDownloader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F21D13A84963F108C33A3E89 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB4D76018363F43FE2A4812 /* UIView+WebCacheOperation.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F51DB89A373AE22FB8778CB8 /* BUKPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 519B3255A5E58CB8490D2BF2 /* BUKPhotoView.m */; };
+		F6B64FEA9573EFB2DA82781F /* BUKPhoto.h in Headers */ = {isa = PBXBuildFile; fileRef = 635A939CA8F45215F34BAC06 /* BUKPhoto.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F87F75287F753EAD6FEF7CE3 /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = CC22F6CF3B6B1D4EA1CF7387 /* UIImage+GIF.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		FB1F13F9B1DDA1D209009FE1 /* UIImage+MultiFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = 6909B93668337B1AC67BEC8A /* UIImage+MultiFormat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCE8EDB0CD3FEBB68A618C57 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C691872AE7ABDFB98989F13 /* UIImageView+WebCache.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5871E82472A371568B6306C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92109D0E7FED855DC6330D5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C35EADDB607B55CAB0B7911D;
+			remoteInfo = "Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser";
+		};
+		6570FC7262954873DD981ED3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92109D0E7FED855DC6330D5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 30A1F0F6AE0DCF5816689EAE;
+			remoteInfo = "Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser-BUKPhotoBrowser";
+		};
+		8A02EEE87DFFB867F23AD925 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92109D0E7FED855DC6330D5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD48CD8C80750EBD768D51FC;
+			remoteInfo = "Pods-BUKPhotoBrowser_Example-SDWebImage";
+		};
+		95F1F626E533219F3D7B9AAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92109D0E7FED855DC6330D5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4F877E51203633B3F18880C;
+			remoteInfo = "Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser-BUKPhotoBrowser";
+		};
+		AC206168CD3E740F22120257 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92109D0E7FED855DC6330D5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2199C676737E59E1C07E1373;
+			remoteInfo = "Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser";
+		};
+		AE86DFB6EA9DAD8D54F1F249 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92109D0E7FED855DC6330D5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A25DEA851A8B097F561E9C12;
+			remoteInfo = "Pods-BUKPhotoBrowser_Tests-SDWebImage";
+		};
+		E714D985ECCA03D04D6DECD2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92109D0E7FED855DC6330D5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD48CD8C80750EBD768D51FC;
+			remoteInfo = "Pods-BUKPhotoBrowser_Example-SDWebImage";
+		};
+		F5368C5E11AEC72F57DB9182 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92109D0E7FED855DC6330D5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A25DEA851A8B097F561E9C12;
+			remoteInfo = "Pods-BUKPhotoBrowser_Tests-SDWebImage";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02B11104B4D5FAA54389AC3A /* Pods-BUKPhotoBrowser_Example-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BUKPhotoBrowser_Example-environment.h"; sourceTree = "<group>"; };
+		058A8D3A7412CDA0DA0B8493 /* SDWebImageDecoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDecoder.h; path = SDWebImage/SDWebImageDecoder.h; sourceTree = "<group>"; };
+		067043BD4AD1AEEC7D8349E7 /* Pods-BUKPhotoBrowser_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BUKPhotoBrowser_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		07FE9C56EF27C2FABBC54E45 /* Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser-Private.xcconfig"; path = "../Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser/Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser-Private.xcconfig"; sourceTree = "<group>"; };
+		0AD09F2896781E91BC1609C1 /* SDWebImageDecoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDecoder.m; path = SDWebImage/SDWebImageDecoder.m; sourceTree = "<group>"; };
+		0B3AAF59D424FFD1C5389920 /* Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser-umbrella.h"; sourceTree = "<group>"; };
+		10585AE16BD46AB10F9FB543 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
+		106C0D0477C2BA32BB96FE49 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Pods-BUKPhotoBrowser_Tests-SDWebImage/Info.plist"; sourceTree = "<group>"; };
+		11DF91707349738739E7807F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		123AD2FAEAFC2B9D6C894255 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16F5A5D2574095CB030DDD3F /* Pods-BUKPhotoBrowser_Example-SDWebImage-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BUKPhotoBrowser_Example-SDWebImage-umbrella.h"; sourceTree = "<group>"; };
+		1C12006AFB0F03E2E3BAA550 /* BUKPhotoBrowser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BUKPhotoBrowser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C691872AE7ABDFB98989F13 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+WebCache.m"; path = "SDWebImage/UIImageView+WebCache.m"; sourceTree = "<group>"; };
+		1E274DA4FD6638DAFEAFDB8E /* Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser-Private.xcconfig"; sourceTree = "<group>"; };
+		233FE718CB9D656B9C53C18C /* Pods-BUKPhotoBrowser_Tests-SDWebImage-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-BUKPhotoBrowser_Tests-SDWebImage-umbrella.h"; path = "../Pods-BUKPhotoBrowser_Tests-SDWebImage/Pods-BUKPhotoBrowser_Tests-SDWebImage-umbrella.h"; sourceTree = "<group>"; };
+		2A90980F61ADB65994F08EEA /* UIButton+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+WebCache.h"; path = "SDWebImage/UIButton+WebCache.h"; sourceTree = "<group>"; };
+		2EF6389B319C7E16FD41FFFF /* BUKPhotoView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BUKPhotoView.h; sourceTree = "<group>"; };
+		2F562EBA04EEF0D71C384B61 /* SDWebImageCompat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageCompat.m; path = SDWebImage/SDWebImageCompat.m; sourceTree = "<group>"; };
+		2F630E5DEBB280E7DF304C30 /* BUKPhotoBrowser.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BUKPhotoBrowser.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		3365B93EE8D71F85CD7D4243 /* Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser.xcconfig"; sourceTree = "<group>"; };
+		34D4CA0BA621D1DB62C207C1 /* Pods-BUKPhotoBrowser_Tests-SDWebImage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-BUKPhotoBrowser_Tests-SDWebImage-prefix.pch"; path = "../Pods-BUKPhotoBrowser_Tests-SDWebImage/Pods-BUKPhotoBrowser_Tests-SDWebImage-prefix.pch"; sourceTree = "<group>"; };
+		37A3E0E5419B091E296BCF50 /* NSData+ImageContentType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+ImageContentType.h"; path = "SDWebImage/NSData+ImageContentType.h"; sourceTree = "<group>"; };
+		3996576BBE4A60A6A6B30AB5 /* Pods-BUKPhotoBrowser_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BUKPhotoBrowser_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		3CE61D3C71620D176A9C3CCB /* Pods-BUKPhotoBrowser_Example-SDWebImage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BUKPhotoBrowser_Example-SDWebImage-prefix.pch"; sourceTree = "<group>"; };
+		40A50ED74DE63EE49BE722EC /* Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; name = "Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser.modulemap"; path = "../Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser/Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser.modulemap"; sourceTree = "<group>"; };
+		43ADD047AF83D1CC5C374F8D /* Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser-dummy.m"; sourceTree = "<group>"; };
+		43F2A61A6DA848136F6F0788 /* SDWebImagePrefetcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImagePrefetcher.h; path = SDWebImage/SDWebImagePrefetcher.h; sourceTree = "<group>"; };
+		47466727516473A3A9F3C3D0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CF9F25CC80E882B7A013F67 /* Pods-BUKPhotoBrowser_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BUKPhotoBrowser_Example-dummy.m"; sourceTree = "<group>"; };
+		506F2AED93A090F89E522A09 /* BUKPhotoBrowser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BUKPhotoBrowser.m; sourceTree = "<group>"; };
+		519B3255A5E58CB8490D2BF2 /* BUKPhotoView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BUKPhotoView.m; sourceTree = "<group>"; };
+		56B39B2DDD69E5BD14CF3878 /* Pods-BUKPhotoBrowser_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BUKPhotoBrowser_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		59619ACF734AF48C7341997D /* BUKPhotoBrowser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BUKPhotoBrowser.h; sourceTree = "<group>"; };
+		5EBD86B12C10600CA869305F /* SDWebImageManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageManager.h; path = SDWebImage/SDWebImageManager.h; sourceTree = "<group>"; };
+		5FA87133B6D49E5906DD88CA /* Pods_BUKPhotoBrowser_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BUKPhotoBrowser_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6209DB4739A6323CA341AC47 /* Pods-BUKPhotoBrowser_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BUKPhotoBrowser_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		630FE24B50D973FBEDCA07C7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser/Info.plist"; sourceTree = "<group>"; };
+		6342DBAB5A41844D3C2BFE83 /* Pods-BUKPhotoBrowser_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BUKPhotoBrowser_Example-resources.sh"; sourceTree = "<group>"; };
+		635A939CA8F45215F34BAC06 /* BUKPhoto.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BUKPhoto.h; sourceTree = "<group>"; };
+		67F7F7C91526305E57A15D45 /* BUKPhotoBrowser.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BUKPhotoBrowser.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		6909B93668337B1AC67BEC8A /* UIImage+MultiFormat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+MultiFormat.h"; path = "SDWebImage/UIImage+MultiFormat.h"; sourceTree = "<group>"; };
+		698101190320332956A54273 /* SDWebImagePrefetcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImagePrefetcher.m; path = SDWebImage/SDWebImagePrefetcher.m; sourceTree = "<group>"; };
+		6B37B7C334122AC2171954F1 /* UIButton+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+WebCache.m"; path = "SDWebImage/UIButton+WebCache.m"; sourceTree = "<group>"; };
+		6B7591B2F0A8288BD7FF03E7 /* SDWebImageOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageOperation.h; path = SDWebImage/SDWebImageOperation.h; sourceTree = "<group>"; };
+		6DAA53E9A34DFB64EEFB9E39 /* SDWebImageManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageManager.m; path = SDWebImage/SDWebImageManager.m; sourceTree = "<group>"; };
+		727D540DEE08CA2A7032B22B /* UIImage+MultiFormat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+MultiFormat.m"; path = "SDWebImage/UIImage+MultiFormat.m"; sourceTree = "<group>"; };
+		74CF8F09C3CB3D5771B9FFFD /* Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser-prefix.pch"; path = "../Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser/Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser-prefix.pch"; sourceTree = "<group>"; };
+		767341B698B256A275BA724B /* Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser-umbrella.h"; path = "../Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser/Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser-umbrella.h"; sourceTree = "<group>"; };
+		778471CD1945BFD50220E747 /* Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser.modulemap"; sourceTree = "<group>"; };
+		78CF57E25F194392954B3F12 /* Pods-BUKPhotoBrowser_Example-SDWebImage-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BUKPhotoBrowser_Example-SDWebImage-Private.xcconfig"; sourceTree = "<group>"; };
+		7D3BF8DE1B9BB49622E75F4A /* Pods-BUKPhotoBrowser_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BUKPhotoBrowser_Example-frameworks.sh"; sourceTree = "<group>"; };
+		7F7A87D1DD32E53A5859F985 /* SDWebImageDownloader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloader.h; path = SDWebImage/SDWebImageDownloader.h; sourceTree = "<group>"; };
+		7FBB431F85EE899A3A9B3CF0 /* Pods-BUKPhotoBrowser_Tests-SDWebImage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-BUKPhotoBrowser_Tests-SDWebImage-dummy.m"; path = "../Pods-BUKPhotoBrowser_Tests-SDWebImage/Pods-BUKPhotoBrowser_Tests-SDWebImage-dummy.m"; sourceTree = "<group>"; };
+		80613A3ADBC422201FCB084D /* Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser.xcconfig"; path = "../Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser/Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser.xcconfig"; sourceTree = "<group>"; };
+		826972E3AD1C5C41D5B586DB /* Pods-BUKPhotoBrowser_Example-SDWebImage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BUKPhotoBrowser_Example-SDWebImage-dummy.m"; sourceTree = "<group>"; };
+		8776F4F90CB8435C0AF5B764 /* Pods-BUKPhotoBrowser_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-BUKPhotoBrowser_Tests.modulemap"; sourceTree = "<group>"; };
+		88D56FEDE7B2754D31B3E7D7 /* Pods-BUKPhotoBrowser_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BUKPhotoBrowser_Tests-resources.sh"; sourceTree = "<group>"; };
+		8C4460EA7BC459BC1F2CA95B /* Pods-BUKPhotoBrowser_Tests-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BUKPhotoBrowser_Tests-environment.h"; sourceTree = "<group>"; };
+		90B9EEB2BEF97F8996D9688E /* Pods-BUKPhotoBrowser_Tests-SDWebImage-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BUKPhotoBrowser_Tests-SDWebImage-Private.xcconfig"; path = "../Pods-BUKPhotoBrowser_Tests-SDWebImage/Pods-BUKPhotoBrowser_Tests-SDWebImage-Private.xcconfig"; sourceTree = "<group>"; };
+		914EC94D8C7EF620BCA5DDDD /* SDImageCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCache.m; path = SDWebImage/SDImageCache.m; sourceTree = "<group>"; };
+		99F5F3BAD435D0592E2CA58D /* Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser-dummy.m"; path = "../Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser/Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser-dummy.m"; sourceTree = "<group>"; };
+		9D582AE5052CF2F1DCCD84B3 /* Pods-BUKPhotoBrowser_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BUKPhotoBrowser_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		A236CB7F5C7A15D312D6C237 /* UIImageView+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+WebCache.h"; path = "SDWebImage/UIImageView+WebCache.h"; sourceTree = "<group>"; };
+		A3679007F644EC67DBA8150D /* Pods-BUKPhotoBrowser_Example-SDWebImage.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-BUKPhotoBrowser_Example-SDWebImage.modulemap"; sourceTree = "<group>"; };
+		A3F58DB96D2370F0993D1DFE /* SDImageCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCache.h; path = SDWebImage/SDImageCache.h; sourceTree = "<group>"; };
+		A4DB7212D7654255AF883E3E /* BUKPhoto.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BUKPhoto.m; sourceTree = "<group>"; };
+		A8A9D99A7325207C3ED7A440 /* Pods-BUKPhotoBrowser_Example-SDWebImage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BUKPhotoBrowser_Example-SDWebImage.xcconfig"; sourceTree = "<group>"; };
+		A9FDE6C6E96E8E72501EE5AF /* SDWebImageDownloader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloader.m; path = SDWebImage/SDWebImageDownloader.m; sourceTree = "<group>"; };
+		AE008F3FD4E214706EBCCEBE /* SDWebImageCompat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageCompat.h; path = SDWebImage/SDWebImageCompat.h; sourceTree = "<group>"; };
+		B47FD3EAABA63F9FBB104740 /* Pods-BUKPhotoBrowser_Tests-SDWebImage.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; name = "Pods-BUKPhotoBrowser_Tests-SDWebImage.modulemap"; path = "../Pods-BUKPhotoBrowser_Tests-SDWebImage/Pods-BUKPhotoBrowser_Tests-SDWebImage.modulemap"; sourceTree = "<group>"; };
+		B87D1A8DE6C97D3CCD356848 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDF02AD9462AC7BD44B4DE5F /* UIImageView+HighlightedWebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+HighlightedWebCache.h"; path = "SDWebImage/UIImageView+HighlightedWebCache.h"; sourceTree = "<group>"; };
+		BFC796CC2304A78FA7F0A628 /* NSData+ImageContentType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+ImageContentType.m"; path = "SDWebImage/NSData+ImageContentType.m"; sourceTree = "<group>"; };
+		C165506D16E6791A887C4716 /* Pods-BUKPhotoBrowser_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BUKPhotoBrowser_Example.release.xcconfig"; sourceTree = "<group>"; };
+		CBAA78A2A3E6E443E5852515 /* UIImage+GIF.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+GIF.h"; path = "SDWebImage/UIImage+GIF.h"; sourceTree = "<group>"; };
+		CBB4D76018363F43FE2A4812 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+WebCacheOperation.m"; path = "SDWebImage/UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		CC22F6CF3B6B1D4EA1CF7387 /* UIImage+GIF.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+GIF.m"; path = "SDWebImage/UIImage+GIF.m"; sourceTree = "<group>"; };
+		D4E756D14BBFB12115E6AA19 /* Pods-BUKPhotoBrowser_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BUKPhotoBrowser_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		D95BFAA851D387239111E9EF /* Pods-BUKPhotoBrowser_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BUKPhotoBrowser_Example-umbrella.h"; sourceTree = "<group>"; };
+		D9664F839202CEFCDB98EF6E /* SDWebImageDownloaderOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloaderOperation.h; path = SDWebImage/SDWebImageDownloaderOperation.h; sourceTree = "<group>"; };
+		D9DA1513CE6A22E133CD211D /* Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser-prefix.pch"; sourceTree = "<group>"; };
+		DDCB9F472FD749A7F22AB7E5 /* Pods-BUKPhotoBrowser_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BUKPhotoBrowser_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		DE267DFD287F65B1952E3F35 /* UIImageView+HighlightedWebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+HighlightedWebCache.m"; path = "SDWebImage/UIImageView+HighlightedWebCache.m"; sourceTree = "<group>"; };
+		DFA8E04AE9364521FEAB0610 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		E273190C523E952E7B45931D /* Pods-BUKPhotoBrowser_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BUKPhotoBrowser_Tests-dummy.m"; sourceTree = "<group>"; };
+		E3E006E675E2B4744FC2B23C /* Pods_BUKPhotoBrowser_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BUKPhotoBrowser_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E65B8146171457BE935CD71C /* Pods-BUKPhotoBrowser_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BUKPhotoBrowser_Tests-umbrella.h"; sourceTree = "<group>"; };
+		EAB75B46D213274D35180063 /* Pods-BUKPhotoBrowser_Tests-SDWebImage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BUKPhotoBrowser_Tests-SDWebImage.xcconfig"; path = "../Pods-BUKPhotoBrowser_Tests-SDWebImage/Pods-BUKPhotoBrowser_Tests-SDWebImage.xcconfig"; sourceTree = "<group>"; };
+		EC0ADD5C642A78B68A0D5259 /* Pods-BUKPhotoBrowser_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BUKPhotoBrowser_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		EC223B58C384576984123C0A /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE3F42ADFD1AE38C676C54E9 /* Pods-BUKPhotoBrowser_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-BUKPhotoBrowser_Example.modulemap"; sourceTree = "<group>"; };
+		F08A602337A3C0700E1A28EF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F35BBD24CA48DFBFDBF156BA /* BUKPhotoBrowser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BUKPhotoBrowser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4700155356B1EDF01DDBD36 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+WebCacheOperation.h"; path = "SDWebImage/UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
+		FE54EEA23BBFBF8109FF0E2D /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FED7F16BE7F12F08B78D3A47 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		FF261A04B9EDC132B6E83FA0 /* SDWebImageDownloaderOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloaderOperation.m; path = SDWebImage/SDWebImageDownloaderOperation.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		06B7EE1983C79F8E75C1E77D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8144B3B79F6B3C3BE1058CC3 /* Foundation.framework in Frameworks */,
+				DAD9AFBE26A2E28D68F1F466 /* ImageIO.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DFCDE5E2AA9F685BDEC53D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E8AB988246C310BAEF26093 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		557925DCB6764C281049AE13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F072401BCD95520BA37E2A62 /* Foundation.framework in Frameworks */,
+				4C9C68E8987BE2E70D5AD7EA /* SDWebImage.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FB9029A81F1034B589C0FFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AECC351ABA1FD27E62E8F2C7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8259CD1FEF94AE0563B07B3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE0D335B43C3BF69D97EED4A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83CB333850826B7EE67F58A9 /* Foundation.framework in Frameworks */,
+				092C5AC179F600FFE7A4AAC7 /* SDWebImage.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D792505D971BDDE114358722 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				940C51B75E0D948556C17C0F /* Foundation.framework in Frameworks */,
+				79A816515C2CFCB8BEB3E6CA /* ImageIO.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F12FB2361B49780A4131375C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0603337B8E4D75A8F79E0820 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				47466727516473A3A9F3C3D0 /* Info.plist */,
+				630FE24B50D973FBEDCA07C7 /* Info.plist */,
+				778471CD1945BFD50220E747 /* Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser.modulemap */,
+				3365B93EE8D71F85CD7D4243 /* Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser.xcconfig */,
+				1E274DA4FD6638DAFEAFDB8E /* Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser-Private.xcconfig */,
+				43ADD047AF83D1CC5C374F8D /* Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser-dummy.m */,
+				D9DA1513CE6A22E133CD211D /* Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser-prefix.pch */,
+				0B3AAF59D424FFD1C5389920 /* Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser-umbrella.h */,
+				40A50ED74DE63EE49BE722EC /* Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser.modulemap */,
+				80613A3ADBC422201FCB084D /* Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser.xcconfig */,
+				07FE9C56EF27C2FABBC54E45 /* Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser-Private.xcconfig */,
+				99F5F3BAD435D0592E2CA58D /* Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser-dummy.m */,
+				74CF8F09C3CB3D5771B9FFFD /* Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser-prefix.pch */,
+				767341B698B256A275BA724B /* Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser";
+			sourceTree = "<group>";
+		};
+		149B9DC04733272072B200EB /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				37A3E0E5419B091E296BCF50 /* NSData+ImageContentType.h */,
+				BFC796CC2304A78FA7F0A628 /* NSData+ImageContentType.m */,
+				A3F58DB96D2370F0993D1DFE /* SDImageCache.h */,
+				914EC94D8C7EF620BCA5DDDD /* SDImageCache.m */,
+				AE008F3FD4E214706EBCCEBE /* SDWebImageCompat.h */,
+				2F562EBA04EEF0D71C384B61 /* SDWebImageCompat.m */,
+				058A8D3A7412CDA0DA0B8493 /* SDWebImageDecoder.h */,
+				0AD09F2896781E91BC1609C1 /* SDWebImageDecoder.m */,
+				7F7A87D1DD32E53A5859F985 /* SDWebImageDownloader.h */,
+				A9FDE6C6E96E8E72501EE5AF /* SDWebImageDownloader.m */,
+				D9664F839202CEFCDB98EF6E /* SDWebImageDownloaderOperation.h */,
+				FF261A04B9EDC132B6E83FA0 /* SDWebImageDownloaderOperation.m */,
+				5EBD86B12C10600CA869305F /* SDWebImageManager.h */,
+				6DAA53E9A34DFB64EEFB9E39 /* SDWebImageManager.m */,
+				6B7591B2F0A8288BD7FF03E7 /* SDWebImageOperation.h */,
+				43F2A61A6DA848136F6F0788 /* SDWebImagePrefetcher.h */,
+				698101190320332956A54273 /* SDWebImagePrefetcher.m */,
+				2A90980F61ADB65994F08EEA /* UIButton+WebCache.h */,
+				6B37B7C334122AC2171954F1 /* UIButton+WebCache.m */,
+				CBAA78A2A3E6E443E5852515 /* UIImage+GIF.h */,
+				CC22F6CF3B6B1D4EA1CF7387 /* UIImage+GIF.m */,
+				6909B93668337B1AC67BEC8A /* UIImage+MultiFormat.h */,
+				727D540DEE08CA2A7032B22B /* UIImage+MultiFormat.m */,
+				BDF02AD9462AC7BD44B4DE5F /* UIImageView+HighlightedWebCache.h */,
+				DE267DFD287F65B1952E3F35 /* UIImageView+HighlightedWebCache.m */,
+				A236CB7F5C7A15D312D6C237 /* UIImageView+WebCache.h */,
+				1C691872AE7ABDFB98989F13 /* UIImageView+WebCache.m */,
+				F4700155356B1EDF01DDBD36 /* UIView+WebCacheOperation.h */,
+				CBB4D76018363F43FE2A4812 /* UIView+WebCacheOperation.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		2065C2A9478B67A515B6624D /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				FED7F16BE7F12F08B78D3A47 /* Foundation.framework */,
+				10585AE16BD46AB10F9FB543 /* ImageIO.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		2E678F4D4A95BF01027E453A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2F630E5DEBB280E7DF304C30 /* BUKPhotoBrowser.bundle */,
+				67F7F7C91526305E57A15D45 /* BUKPhotoBrowser.bundle */,
+				1C12006AFB0F03E2E3BAA550 /* BUKPhotoBrowser.framework */,
+				F35BBD24CA48DFBFDBF156BA /* BUKPhotoBrowser.framework */,
+				5FA87133B6D49E5906DD88CA /* Pods_BUKPhotoBrowser_Example.framework */,
+				E3E006E675E2B4744FC2B23C /* Pods_BUKPhotoBrowser_Tests.framework */,
+				FE54EEA23BBFBF8109FF0E2D /* SDWebImage.framework */,
+				EC223B58C384576984123C0A /* SDWebImage.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2F32D0BB9412A5373BB74E2B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B87D1A8DE6C97D3CCD356848 /* SDWebImage.framework */,
+				2065C2A9478B67A515B6624D /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		39C912F3B0EC0AC1931829AC /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E1443E0FAC8F9B467DD97068 /* BUKPhotoBrowser */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		77F8FE4A4ADC10D52DBD1C60 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A0AD050BF556D4B6C8C0AF92 /* SDWebImage */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9AD7C1C206DCED5317C6694A = {
+			isa = PBXGroup;
+			children = (
+				DFA8E04AE9364521FEAB0610 /* Podfile */,
+				39C912F3B0EC0AC1931829AC /* Development Pods */,
+				2F32D0BB9412A5373BB74E2B /* Frameworks */,
+				77F8FE4A4ADC10D52DBD1C60 /* Pods */,
+				2E678F4D4A95BF01027E453A /* Products */,
+				CF8D67485A4F45AAE5877AFC /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		9C91C1C8920902CBDE85F7ED /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				123AD2FAEAFC2B9D6C894255 /* Info.plist */,
+				106C0D0477C2BA32BB96FE49 /* Info.plist */,
+				A3679007F644EC67DBA8150D /* Pods-BUKPhotoBrowser_Example-SDWebImage.modulemap */,
+				A8A9D99A7325207C3ED7A440 /* Pods-BUKPhotoBrowser_Example-SDWebImage.xcconfig */,
+				78CF57E25F194392954B3F12 /* Pods-BUKPhotoBrowser_Example-SDWebImage-Private.xcconfig */,
+				826972E3AD1C5C41D5B586DB /* Pods-BUKPhotoBrowser_Example-SDWebImage-dummy.m */,
+				3CE61D3C71620D176A9C3CCB /* Pods-BUKPhotoBrowser_Example-SDWebImage-prefix.pch */,
+				16F5A5D2574095CB030DDD3F /* Pods-BUKPhotoBrowser_Example-SDWebImage-umbrella.h */,
+				B47FD3EAABA63F9FBB104740 /* Pods-BUKPhotoBrowser_Tests-SDWebImage.modulemap */,
+				EAB75B46D213274D35180063 /* Pods-BUKPhotoBrowser_Tests-SDWebImage.xcconfig */,
+				90B9EEB2BEF97F8996D9688E /* Pods-BUKPhotoBrowser_Tests-SDWebImage-Private.xcconfig */,
+				7FBB431F85EE899A3A9B3CF0 /* Pods-BUKPhotoBrowser_Tests-SDWebImage-dummy.m */,
+				34D4CA0BA621D1DB62C207C1 /* Pods-BUKPhotoBrowser_Tests-SDWebImage-prefix.pch */,
+				233FE718CB9D656B9C53C18C /* Pods-BUKPhotoBrowser_Tests-SDWebImage-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-BUKPhotoBrowser_Example-SDWebImage";
+			sourceTree = "<group>";
+		};
+		A0177FA2A8A60F6FE599AA9E /* Pods-BUKPhotoBrowser_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				11DF91707349738739E7807F /* Info.plist */,
+				8776F4F90CB8435C0AF5B764 /* Pods-BUKPhotoBrowser_Tests.modulemap */,
+				EC0ADD5C642A78B68A0D5259 /* Pods-BUKPhotoBrowser_Tests-acknowledgements.markdown */,
+				D4E756D14BBFB12115E6AA19 /* Pods-BUKPhotoBrowser_Tests-acknowledgements.plist */,
+				E273190C523E952E7B45931D /* Pods-BUKPhotoBrowser_Tests-dummy.m */,
+				8C4460EA7BC459BC1F2CA95B /* Pods-BUKPhotoBrowser_Tests-environment.h */,
+				6209DB4739A6323CA341AC47 /* Pods-BUKPhotoBrowser_Tests-frameworks.sh */,
+				88D56FEDE7B2754D31B3E7D7 /* Pods-BUKPhotoBrowser_Tests-resources.sh */,
+				E65B8146171457BE935CD71C /* Pods-BUKPhotoBrowser_Tests-umbrella.h */,
+				9D582AE5052CF2F1DCCD84B3 /* Pods-BUKPhotoBrowser_Tests.debug.xcconfig */,
+				56B39B2DDD69E5BD14CF3878 /* Pods-BUKPhotoBrowser_Tests.release.xcconfig */,
+			);
+			name = "Pods-BUKPhotoBrowser_Tests";
+			path = "Target Support Files/Pods-BUKPhotoBrowser_Tests";
+			sourceTree = "<group>";
+		};
+		A0AD050BF556D4B6C8C0AF92 /* SDWebImage */ = {
+			isa = PBXGroup;
+			children = (
+				149B9DC04733272072B200EB /* Core */,
+				9C91C1C8920902CBDE85F7ED /* Support Files */,
+			);
+			path = SDWebImage;
+			sourceTree = "<group>";
+		};
+		CF8D67485A4F45AAE5877AFC /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E35E01F83A14DDD8AEC47607 /* Pods-BUKPhotoBrowser_Example */,
+				A0177FA2A8A60F6FE599AA9E /* Pods-BUKPhotoBrowser_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		E1443E0FAC8F9B467DD97068 /* BUKPhotoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				F61C37CAACD0F5C774F863EF /* Pod */,
+				0603337B8E4D75A8F79E0820 /* Support Files */,
+			);
+			name = BUKPhotoBrowser;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		E35E01F83A14DDD8AEC47607 /* Pods-BUKPhotoBrowser_Example */ = {
+			isa = PBXGroup;
+			children = (
+				F08A602337A3C0700E1A28EF /* Info.plist */,
+				EE3F42ADFD1AE38C676C54E9 /* Pods-BUKPhotoBrowser_Example.modulemap */,
+				067043BD4AD1AEEC7D8349E7 /* Pods-BUKPhotoBrowser_Example-acknowledgements.markdown */,
+				3996576BBE4A60A6A6B30AB5 /* Pods-BUKPhotoBrowser_Example-acknowledgements.plist */,
+				4CF9F25CC80E882B7A013F67 /* Pods-BUKPhotoBrowser_Example-dummy.m */,
+				02B11104B4D5FAA54389AC3A /* Pods-BUKPhotoBrowser_Example-environment.h */,
+				7D3BF8DE1B9BB49622E75F4A /* Pods-BUKPhotoBrowser_Example-frameworks.sh */,
+				6342DBAB5A41844D3C2BFE83 /* Pods-BUKPhotoBrowser_Example-resources.sh */,
+				D95BFAA851D387239111E9EF /* Pods-BUKPhotoBrowser_Example-umbrella.h */,
+				DDCB9F472FD749A7F22AB7E5 /* Pods-BUKPhotoBrowser_Example.debug.xcconfig */,
+				C165506D16E6791A887C4716 /* Pods-BUKPhotoBrowser_Example.release.xcconfig */,
+			);
+			name = "Pods-BUKPhotoBrowser_Example";
+			path = "Target Support Files/Pods-BUKPhotoBrowser_Example";
+			sourceTree = "<group>";
+		};
+		E9BAD19F7E8E12BB566BC0EA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				635A939CA8F45215F34BAC06 /* BUKPhoto.h */,
+				A4DB7212D7654255AF883E3E /* BUKPhoto.m */,
+				59619ACF734AF48C7341997D /* BUKPhotoBrowser.h */,
+				506F2AED93A090F89E522A09 /* BUKPhotoBrowser.m */,
+				2EF6389B319C7E16FD41FFFF /* BUKPhotoView.h */,
+				519B3255A5E58CB8490D2BF2 /* BUKPhotoView.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		F61C37CAACD0F5C774F863EF /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				E9BAD19F7E8E12BB566BC0EA /* Classes */,
+			);
+			path = Pod;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1C2C9C3C80108FF829720FF3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				667296EA720E6C4CA8986F99 /* Pods-BUKPhotoBrowser_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27B06E167CA7AABAEED166CA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B0272A5D6CB6DE1D4338CE7 /* NSData+ImageContentType.h in Headers */,
+				8B7B1282259C1207330D4152 /* Pods-BUKPhotoBrowser_Example-SDWebImage-umbrella.h in Headers */,
+				787AF9EDA8BC6CD4A27C9540 /* SDImageCache.h in Headers */,
+				DF4CA412D38EAA3EB52A341D /* SDWebImageCompat.h in Headers */,
+				12DD0563A0BA283A53758112 /* SDWebImageDecoder.h in Headers */,
+				F0E6278DAA85E3F8C256E967 /* SDWebImageDownloader.h in Headers */,
+				9872FFEE041CFE17C36F2778 /* SDWebImageDownloaderOperation.h in Headers */,
+				EC01BDA7D46B86EB02F6ED61 /* SDWebImageManager.h in Headers */,
+				51110E4B20426405355FFE29 /* SDWebImageOperation.h in Headers */,
+				0A0AB8853F0490C0FC8B76F4 /* SDWebImagePrefetcher.h in Headers */,
+				716A30CE525FEDBE4E8BBEE8 /* UIButton+WebCache.h in Headers */,
+				39DF76F7DB94354646DF6562 /* UIImage+GIF.h in Headers */,
+				FB1F13F9B1DDA1D209009FE1 /* UIImage+MultiFormat.h in Headers */,
+				3C9A9F80545D8CC5B9FC19EE /* UIImageView+HighlightedWebCache.h in Headers */,
+				DE59BA5E0E75A41F71BA367A /* UIImageView+WebCache.h in Headers */,
+				10B2B0B23CED099409553AD3 /* UIView+WebCacheOperation.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		482F5500DB9BCECB503D75EB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FCB106BA85BA56420DE6511 /* BUKPhoto.h in Headers */,
+				0C3044A6342C8AE0013D0EA2 /* BUKPhotoBrowser.h in Headers */,
+				BD338385DBB366D66E180FD5 /* BUKPhotoView.h in Headers */,
+				4D851E1D629175A0CEA6A3BF /* Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6595B5059C4F76BBE24275D4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BE84D7660ADB24D03B74BC7 /* Pods-BUKPhotoBrowser_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92EFD3A048C5EA8A4AF21067 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				960CB271E4FF40BB1C0765E0 /* NSData+ImageContentType.h in Headers */,
+				879889B2B6B9D8F5B91EA071 /* Pods-BUKPhotoBrowser_Tests-SDWebImage-umbrella.h in Headers */,
+				034A073C2A4066095CA90E1C /* SDImageCache.h in Headers */,
+				09D0B7B0800A37D3EF6DAD91 /* SDWebImageCompat.h in Headers */,
+				E12234E09D8E45F073CDA5A6 /* SDWebImageDecoder.h in Headers */,
+				4C2A8E72B9C2026D1A2ACFB4 /* SDWebImageDownloader.h in Headers */,
+				27F38CC4B0B4CD1DFA68F720 /* SDWebImageDownloaderOperation.h in Headers */,
+				B81CEEBF68BF99ED53F8A3B4 /* SDWebImageManager.h in Headers */,
+				3727DE966D3EA5174CBFA220 /* SDWebImageOperation.h in Headers */,
+				A995165246976D49DB35E6C7 /* SDWebImagePrefetcher.h in Headers */,
+				4D01E017372FE3BBFB2DC574 /* UIButton+WebCache.h in Headers */,
+				D3AF74FC9423F9B5028400AC /* UIImage+GIF.h in Headers */,
+				23C6DDB1F587C3CAFC594037 /* UIImage+MultiFormat.h in Headers */,
+				ECBB1E2B342BCC54749EDA3B /* UIImageView+HighlightedWebCache.h in Headers */,
+				E6AADDBF87AD73BAB6C5BC58 /* UIImageView+WebCache.h in Headers */,
+				621E4DB22EA18649CFFC9C8B /* UIView+WebCacheOperation.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6E79AB7AD38840E2A418FA0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6B64FEA9573EFB2DA82781F /* BUKPhoto.h in Headers */,
+				34A79CBB713AA36A34D8C255 /* BUKPhotoBrowser.h in Headers */,
+				9645DF44DE4196DCFF2947D3 /* BUKPhotoView.h in Headers */,
+				969A9A2CE648F02A9B9F4C10 /* Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2199C676737E59E1C07E1373 /* Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E50F6A70C4956EC2FFC397D3 /* Build configuration list for PBXNativeTarget "Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser" */;
+			buildPhases = (
+				67043B8B09EC12DDB37A3B74 /* Sources */,
+				BE0D335B43C3BF69D97EED4A /* Frameworks */,
+				BDADC15FC7B951C27BFA45C3 /* Resources */,
+				482F5500DB9BCECB503D75EB /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F34B4BDD75BF76CB92607462 /* PBXTargetDependency */,
+				78B8D1F3DF582C57DFDA7D99 /* PBXTargetDependency */,
+			);
+			name = "Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser";
+			productName = "Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser";
+			productReference = F35BBD24CA48DFBFDBF156BA /* BUKPhotoBrowser.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		30A1F0F6AE0DCF5816689EAE /* Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser-BUKPhotoBrowser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B3325AC6426647B1AE6C7AE /* Build configuration list for PBXNativeTarget "Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser-BUKPhotoBrowser" */;
+			buildPhases = (
+				664DD338F39BCF4CADD0B326 /* Sources */,
+				F12FB2361B49780A4131375C /* Frameworks */,
+				06C3B8C1F52A8364DD9D7312 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser-BUKPhotoBrowser";
+			productName = "Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser-BUKPhotoBrowser";
+			productReference = 67F7F7C91526305E57A15D45 /* BUKPhotoBrowser.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		A25DEA851A8B097F561E9C12 /* Pods-BUKPhotoBrowser_Tests-SDWebImage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F2D0C575F6C8C3266E0EF4D /* Build configuration list for PBXNativeTarget "Pods-BUKPhotoBrowser_Tests-SDWebImage" */;
+			buildPhases = (
+				C82739FEA819DC9887F70770 /* Sources */,
+				06B7EE1983C79F8E75C1E77D /* Frameworks */,
+				92EFD3A048C5EA8A4AF21067 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-BUKPhotoBrowser_Tests-SDWebImage";
+			productName = "Pods-BUKPhotoBrowser_Tests-SDWebImage";
+			productReference = EC223B58C384576984123C0A /* SDWebImage.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B4F877E51203633B3F18880C /* Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser-BUKPhotoBrowser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6D3DD7EE1B5244AB294F946 /* Build configuration list for PBXNativeTarget "Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser-BUKPhotoBrowser" */;
+			buildPhases = (
+				727040B0867DCAA0654B743F /* Sources */,
+				8259CD1FEF94AE0563B07B3D /* Frameworks */,
+				1A159AE70F24F6BDB6D65435 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser-BUKPhotoBrowser";
+			productName = "Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser-BUKPhotoBrowser";
+			productReference = 2F630E5DEBB280E7DF304C30 /* BUKPhotoBrowser.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		C35EADDB607B55CAB0B7911D /* Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B07295E653B5836D01AAAFB6 /* Build configuration list for PBXNativeTarget "Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser" */;
+			buildPhases = (
+				A2C3367C0A70DB65BF1E45E6 /* Sources */,
+				557925DCB6764C281049AE13 /* Frameworks */,
+				06D8C3A04560C041C18DE104 /* Resources */,
+				C6E79AB7AD38840E2A418FA0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1D3ABDBCBDB83604BEA473D2 /* PBXTargetDependency */,
+				0651ABA2C4792C4A4288D9DD /* PBXTargetDependency */,
+			);
+			name = "Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser";
+			productName = "Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser";
+			productReference = 1C12006AFB0F03E2E3BAA550 /* BUKPhotoBrowser.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D273CB9C03DE996D72E9D7B7 /* Pods-BUKPhotoBrowser_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 656F6BBDCF95BE8C82D6C657 /* Build configuration list for PBXNativeTarget "Pods-BUKPhotoBrowser_Example" */;
+			buildPhases = (
+				B73B38ED7E4411DF4E1FDA7A /* Sources */,
+				6FB9029A81F1034B589C0FFA /* Frameworks */,
+				1C2C9C3C80108FF829720FF3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DBA454FA8B7FA07A5DE698E2 /* PBXTargetDependency */,
+				2661DE93BDC40E0D2B3CAA18 /* PBXTargetDependency */,
+			);
+			name = "Pods-BUKPhotoBrowser_Example";
+			productName = "Pods-BUKPhotoBrowser_Example";
+			productReference = 5FA87133B6D49E5906DD88CA /* Pods_BUKPhotoBrowser_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EC46423EDDE67BD3E2481127 /* Pods-BUKPhotoBrowser_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8286D236618829750BBEF25 /* Build configuration list for PBXNativeTarget "Pods-BUKPhotoBrowser_Tests" */;
+			buildPhases = (
+				5566F6A7FE3CF1D1CC2BCC7A /* Sources */,
+				0DFCDE5E2AA9F685BDEC53D3 /* Frameworks */,
+				6595B5059C4F76BBE24275D4 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				14E06FD43689C2E1163065EE /* PBXTargetDependency */,
+				5D31106255BECACDE55A1958 /* PBXTargetDependency */,
+			);
+			name = "Pods-BUKPhotoBrowser_Tests";
+			productName = "Pods-BUKPhotoBrowser_Tests";
+			productReference = E3E006E675E2B4744FC2B23C /* Pods_BUKPhotoBrowser_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FD48CD8C80750EBD768D51FC /* Pods-BUKPhotoBrowser_Example-SDWebImage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C676B6AD8C5075F28C66426E /* Build configuration list for PBXNativeTarget "Pods-BUKPhotoBrowser_Example-SDWebImage" */;
+			buildPhases = (
+				B2BF07671FF987541B922406 /* Sources */,
+				D792505D971BDDE114358722 /* Frameworks */,
+				27B06E167CA7AABAEED166CA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-BUKPhotoBrowser_Example-SDWebImage";
+			productName = "Pods-BUKPhotoBrowser_Example-SDWebImage";
+			productReference = FE54EEA23BBFBF8109FF0E2D /* SDWebImage.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		92109D0E7FED855DC6330D5A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+			};
+			buildConfigurationList = 558C2574D7C4C16F3FBD5EEA /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9AD7C1C206DCED5317C6694A;
+			productRefGroup = 2E678F4D4A95BF01027E453A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D273CB9C03DE996D72E9D7B7 /* Pods-BUKPhotoBrowser_Example */,
+				C35EADDB607B55CAB0B7911D /* Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser */,
+				30A1F0F6AE0DCF5816689EAE /* Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser-BUKPhotoBrowser */,
+				FD48CD8C80750EBD768D51FC /* Pods-BUKPhotoBrowser_Example-SDWebImage */,
+				EC46423EDDE67BD3E2481127 /* Pods-BUKPhotoBrowser_Tests */,
+				2199C676737E59E1C07E1373 /* Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser */,
+				B4F877E51203633B3F18880C /* Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser-BUKPhotoBrowser */,
+				A25DEA851A8B097F561E9C12 /* Pods-BUKPhotoBrowser_Tests-SDWebImage */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		06C3B8C1F52A8364DD9D7312 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06D8C3A04560C041C18DE104 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80A5A314EB5B2D357B94C5B8 /* BUKPhotoBrowser.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A159AE70F24F6BDB6D65435 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDADC15FC7B951C27BFA45C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				969746CE3622FA7A709CCF43 /* BUKPhotoBrowser.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5566F6A7FE3CF1D1CC2BCC7A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A50BCFD4C00038C014318F1 /* Pods-BUKPhotoBrowser_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		664DD338F39BCF4CADD0B326 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67043B8B09EC12DDB37A3B74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B78E2BDC9741C95DD6394FF0 /* BUKPhoto.m in Sources */,
+				44BD5035E8B898C253F2A946 /* BUKPhotoBrowser.m in Sources */,
+				F51DB89A373AE22FB8778CB8 /* BUKPhotoView.m in Sources */,
+				6D7A91FB6B3E1B6DB9BF26F0 /* Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		727040B0867DCAA0654B743F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2C3367C0A70DB65BF1E45E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E7AD7275920C27ED6F50C50 /* BUKPhoto.m in Sources */,
+				B779326A91B1B3E7FD2F1386 /* BUKPhotoBrowser.m in Sources */,
+				B0F009160DA84B7C32F80127 /* BUKPhotoView.m in Sources */,
+				CFCC8EF356F14A929CA9F680 /* Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2BF07671FF987541B922406 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CFAA3F56667A7833A20FF3D /* NSData+ImageContentType.m in Sources */,
+				481352C145BF26C2B639A5F7 /* Pods-BUKPhotoBrowser_Example-SDWebImage-dummy.m in Sources */,
+				E1DB41D6C02020BB85C6125F /* SDImageCache.m in Sources */,
+				01EAA4E3538E7806333A6D36 /* SDWebImageCompat.m in Sources */,
+				276702561C00040FD612F471 /* SDWebImageDecoder.m in Sources */,
+				0F4F0269BB2B56235D57163C /* SDWebImageDownloader.m in Sources */,
+				CD71C887E2465E1BFFA83813 /* SDWebImageDownloaderOperation.m in Sources */,
+				328CD5D7A9310801625A6F12 /* SDWebImageManager.m in Sources */,
+				549F56BEFA4E53E32A9FB715 /* SDWebImagePrefetcher.m in Sources */,
+				9598E27B0868A087C2874569 /* UIButton+WebCache.m in Sources */,
+				85D46D41C7A025F0B03EAF4C /* UIImage+GIF.m in Sources */,
+				29E960BB2C1C58B7F95936D6 /* UIImage+MultiFormat.m in Sources */,
+				ECDDB9E95BF9D8BC40C20DB2 /* UIImageView+HighlightedWebCache.m in Sources */,
+				FCE8EDB0CD3FEBB68A618C57 /* UIImageView+WebCache.m in Sources */,
+				F21D13A84963F108C33A3E89 /* UIView+WebCacheOperation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B73B38ED7E4411DF4E1FDA7A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59523F1A93F69CEF250473A7 /* Pods-BUKPhotoBrowser_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C82739FEA819DC9887F70770 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4B3C33F453F8788D51F3356 /* NSData+ImageContentType.m in Sources */,
+				4BBF79A890F2566C8D9619E1 /* Pods-BUKPhotoBrowser_Tests-SDWebImage-dummy.m in Sources */,
+				3A6414AACFA970CB7D02E1F3 /* SDImageCache.m in Sources */,
+				C41BEE675FC5D6A07E0D95F0 /* SDWebImageCompat.m in Sources */,
+				EC4FFE479A15A7CACFF4EF88 /* SDWebImageDecoder.m in Sources */,
+				382C02FDC318EE6B4C6EB376 /* SDWebImageDownloader.m in Sources */,
+				A8B9095F377D87383FEBC908 /* SDWebImageDownloaderOperation.m in Sources */,
+				929A39DC7E572505CDF1CA42 /* SDWebImageManager.m in Sources */,
+				48D55E0E5E3198F6378A84DE /* SDWebImagePrefetcher.m in Sources */,
+				B0F34FBF6BBDE2C3C85AF01A /* UIButton+WebCache.m in Sources */,
+				F87F75287F753EAD6FEF7CE3 /* UIImage+GIF.m in Sources */,
+				0B42EE84501A1B8D327E0441 /* UIImage+MultiFormat.m in Sources */,
+				5DE50AD8BA98F1FF620E0B1C /* UIImageView+HighlightedWebCache.m in Sources */,
+				D7522547F77E6112E412904C /* UIImageView+WebCache.m in Sources */,
+				8996D803286EF82A5F744FAD /* UIView+WebCacheOperation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0651ABA2C4792C4A4288D9DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-BUKPhotoBrowser_Example-SDWebImage";
+			target = FD48CD8C80750EBD768D51FC /* Pods-BUKPhotoBrowser_Example-SDWebImage */;
+			targetProxy = 8A02EEE87DFFB867F23AD925 /* PBXContainerItemProxy */;
+		};
+		14E06FD43689C2E1163065EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser";
+			target = 2199C676737E59E1C07E1373 /* Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser */;
+			targetProxy = AC206168CD3E740F22120257 /* PBXContainerItemProxy */;
+		};
+		1D3ABDBCBDB83604BEA473D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser-BUKPhotoBrowser";
+			target = 30A1F0F6AE0DCF5816689EAE /* Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser-BUKPhotoBrowser */;
+			targetProxy = 6570FC7262954873DD981ED3 /* PBXContainerItemProxy */;
+		};
+		2661DE93BDC40E0D2B3CAA18 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-BUKPhotoBrowser_Example-SDWebImage";
+			target = FD48CD8C80750EBD768D51FC /* Pods-BUKPhotoBrowser_Example-SDWebImage */;
+			targetProxy = E714D985ECCA03D04D6DECD2 /* PBXContainerItemProxy */;
+		};
+		5D31106255BECACDE55A1958 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-BUKPhotoBrowser_Tests-SDWebImage";
+			target = A25DEA851A8B097F561E9C12 /* Pods-BUKPhotoBrowser_Tests-SDWebImage */;
+			targetProxy = AE86DFB6EA9DAD8D54F1F249 /* PBXContainerItemProxy */;
+		};
+		78B8D1F3DF582C57DFDA7D99 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-BUKPhotoBrowser_Tests-SDWebImage";
+			target = A25DEA851A8B097F561E9C12 /* Pods-BUKPhotoBrowser_Tests-SDWebImage */;
+			targetProxy = F5368C5E11AEC72F57DB9182 /* PBXContainerItemProxy */;
+		};
+		DBA454FA8B7FA07A5DE698E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser";
+			target = C35EADDB607B55CAB0B7911D /* Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser */;
+			targetProxy = 5871E82472A371568B6306C7 /* PBXContainerItemProxy */;
+		};
+		F34B4BDD75BF76CB92607462 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser-BUKPhotoBrowser";
+			target = B4F877E51203633B3F18880C /* Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser-BUKPhotoBrowser */;
+			targetProxy = 95F1F626E533219F3D7B9AAE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1040A5060AB0C66A338FD1C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07FE9C56EF27C2FABBC54E45 /* Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser-Private.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods-BUKPhotoBrowser_Tests";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = BUKPhotoBrowser;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		375424D8AF32779D44A20184 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D582AE5052CF2F1DCCD84B3 /* Pods-BUKPhotoBrowser_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-BUKPhotoBrowser_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BUKPhotoBrowser_Tests/Pods-BUKPhotoBrowser_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_BUKPhotoBrowser_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		45C6937EA29C8632365A58EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4E15060096299CCC57473F3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90B9EEB2BEF97F8996D9688E /* Pods-BUKPhotoBrowser_Tests-SDWebImage-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BUKPhotoBrowser_Tests-SDWebImage/Pods-BUKPhotoBrowser_Tests-SDWebImage-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-BUKPhotoBrowser_Tests-SDWebImage/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BUKPhotoBrowser_Tests-SDWebImage/Pods-BUKPhotoBrowser_Tests-SDWebImage.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SDWebImage;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5FDF057CF681B5C2595FEE2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78CF57E25F194392954B3F12 /* Pods-BUKPhotoBrowser_Example-SDWebImage-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BUKPhotoBrowser_Example-SDWebImage/Pods-BUKPhotoBrowser_Example-SDWebImage-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-BUKPhotoBrowser_Example-SDWebImage/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BUKPhotoBrowser_Example-SDWebImage/Pods-BUKPhotoBrowser_Example-SDWebImage.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SDWebImage;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		896538FE2C6D7AFF2E0EF68A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07FE9C56EF27C2FABBC54E45 /* Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser-Private.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods-BUKPhotoBrowser_Tests";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = BUKPhotoBrowser;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		8D5D135FD01E4B016B1CF31E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56B39B2DDD69E5BD14CF3878 /* Pods-BUKPhotoBrowser_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-BUKPhotoBrowser_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BUKPhotoBrowser_Tests/Pods-BUKPhotoBrowser_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_BUKPhotoBrowser_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		92C206009EA982C3454888E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07FE9C56EF27C2FABBC54E45 /* Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser/Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser/Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = BUKPhotoBrowser;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		92E4DE31AC7B14AE17A57FA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDCB9F472FD749A7F22AB7E5 /* Pods-BUKPhotoBrowser_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-BUKPhotoBrowser_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BUKPhotoBrowser_Example/Pods-BUKPhotoBrowser_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_BUKPhotoBrowser_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		93E6A1979EBA51BC1B3A480F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90B9EEB2BEF97F8996D9688E /* Pods-BUKPhotoBrowser_Tests-SDWebImage-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BUKPhotoBrowser_Tests-SDWebImage/Pods-BUKPhotoBrowser_Tests-SDWebImage-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-BUKPhotoBrowser_Tests-SDWebImage/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BUKPhotoBrowser_Tests-SDWebImage/Pods-BUKPhotoBrowser_Tests-SDWebImage.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SDWebImage;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		985278C9EC23268CEB452DBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07FE9C56EF27C2FABBC54E45 /* Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser/Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser/Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = BUKPhotoBrowser;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		99B2A63551369927E2AFBF41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E274DA4FD6638DAFEAFDB8E /* Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser/Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser/Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = BUKPhotoBrowser;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9AEA1BFCF91D1752CF84C5AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78CF57E25F194392954B3F12 /* Pods-BUKPhotoBrowser_Example-SDWebImage-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BUKPhotoBrowser_Example-SDWebImage/Pods-BUKPhotoBrowser_Example-SDWebImage-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-BUKPhotoBrowser_Example-SDWebImage/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BUKPhotoBrowser_Example-SDWebImage/Pods-BUKPhotoBrowser_Example-SDWebImage.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SDWebImage;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9F82EAEB9EBF9798E4093039 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		AA9991ABDD5C3B3811843F36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C165506D16E6791A887C4716 /* Pods-BUKPhotoBrowser_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-BUKPhotoBrowser_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BUKPhotoBrowser_Example/Pods-BUKPhotoBrowser_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_BUKPhotoBrowser_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B29FDCED9E1D6EC1C8548179 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E274DA4FD6638DAFEAFDB8E /* Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser/Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser/Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = BUKPhotoBrowser;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D0883BDA85EA7651534B7337 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E274DA4FD6638DAFEAFDB8E /* Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser-Private.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods-BUKPhotoBrowser_Example";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = BUKPhotoBrowser;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		DB2AD0579BD66B0A8A7E9940 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E274DA4FD6638DAFEAFDB8E /* Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser-Private.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods-BUKPhotoBrowser_Example";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = BUKPhotoBrowser;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0F2D0C575F6C8C3266E0EF4D /* Build configuration list for PBXNativeTarget "Pods-BUKPhotoBrowser_Tests-SDWebImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93E6A1979EBA51BC1B3A480F /* Debug */,
+				4E15060096299CCC57473F3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		558C2574D7C4C16F3FBD5EEA /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F82EAEB9EBF9798E4093039 /* Debug */,
+				45C6937EA29C8632365A58EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B3325AC6426647B1AE6C7AE /* Build configuration list for PBXNativeTarget "Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser-BUKPhotoBrowser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0883BDA85EA7651534B7337 /* Debug */,
+				DB2AD0579BD66B0A8A7E9940 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		656F6BBDCF95BE8C82D6C657 /* Build configuration list for PBXNativeTarget "Pods-BUKPhotoBrowser_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92E4DE31AC7B14AE17A57FA5 /* Debug */,
+				AA9991ABDD5C3B3811843F36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B07295E653B5836D01AAAFB6 /* Build configuration list for PBXNativeTarget "Pods-BUKPhotoBrowser_Example-BUKPhotoBrowser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B29FDCED9E1D6EC1C8548179 /* Debug */,
+				99B2A63551369927E2AFBF41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B8286D236618829750BBEF25 /* Build configuration list for PBXNativeTarget "Pods-BUKPhotoBrowser_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				375424D8AF32779D44A20184 /* Debug */,
+				8D5D135FD01E4B016B1CF31E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C676B6AD8C5075F28C66426E /* Build configuration list for PBXNativeTarget "Pods-BUKPhotoBrowser_Example-SDWebImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AEA1BFCF91D1752CF84C5AB /* Debug */,
+				5FDF057CF681B5C2595FEE2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E50F6A70C4956EC2FFC397D3 /* Build configuration list for PBXNativeTarget "Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92C206009EA982C3454888E7 /* Debug */,
+				985278C9EC23268CEB452DBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6D3DD7EE1B5244AB294F946 /* Build configuration list for PBXNativeTarget "Pods-BUKPhotoBrowser_Tests-BUKPhotoBrowser-BUKPhotoBrowser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				896538FE2C6D7AFF2E0EF68A /* Debug */,
+				1040A5060AB0C66A338FD1C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 92109D0E7FED855DC6330D5A /* Project object */;
+}

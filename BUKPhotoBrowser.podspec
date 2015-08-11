@@ -9,20 +9,18 @@
 
 Pod::Spec.new do |s|
   s.name             = "BUKPhotoBrowser"
-  s.version          = "0.1.0"
-  s.summary          = "A short description of BUKPhotoBrowser."
+  s.version          = "1.0.0"
+  s.summary          = "A photo browser library."
   s.description      = <<-DESC
-                       An optional longer description of BUKPhotoBrowser
-
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
+                       BUKPhotoBrowser is used to view large photos. You can pinch to scale the photo size,
+                       tap to dismiss browser, pan to switch photo and so on. You can alse custom toolbar
+                       for special usage.
                        DESC
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/BUKPhotoBrowser"
+  s.homepage         = "https://github.com/iException/BUKPhotoBrowser"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "hyice" => "hy_ice719@163.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/BUKPhotoBrowser.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => "https://github.com/iException/BUKPhotoBrowser.git", :tag => s.version.to_s }
 
   s.platform     = :ios, '7.0'
   s.requires_arc = true
@@ -34,5 +32,5 @@ Pod::Spec.new do |s|
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'SDWebImage', '3.7.2'
 end

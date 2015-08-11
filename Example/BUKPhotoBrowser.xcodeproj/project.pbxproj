@@ -21,6 +21,7 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		65DD644B1B79EE6000A243AC /* BUKDemoActionBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DD644A1B79EE6000A243AC /* BUKDemoActionBar.m */; };
 		6A48F575D434540E93F76C28 /* Pods_BUKPhotoBrowser_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58999D98221D37B4389A6CB9 /* Pods_BUKPhotoBrowser_Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 /* End PBXBuildFile section */
@@ -41,7 +42,7 @@
 		58999D98221D37B4389A6CB9 /* Pods_BUKPhotoBrowser_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BUKPhotoBrowser_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EC54B2E0C92BE3D4C2D6CAA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		5F1CF51E817E33BCD4246F30 /* Pods-BUKPhotoBrowser_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BUKPhotoBrowser_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-BUKPhotoBrowser_Example/Pods-BUKPhotoBrowser_Example.release.xcconfig"; sourceTree = "<group>"; };
-		6003F58A195388D20070C39A /* BUKPhotoBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = BUKPhotoBrowser.app; path = BUKPhotoBrowser_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F58A195388D20070C39A /* BUKPhotoBrowser_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BUKPhotoBrowser_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -54,12 +55,14 @@
 		6003F5A5195388D20070C39A /* BUKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BUKViewController.h; sourceTree = "<group>"; };
 		6003F5A6195388D20070C39A /* BUKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BUKViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		6003F5AE195388D20070C39A /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Tests.xctest; path = BUKPhotoBrowser_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F5AE195388D20070C39A /* BUKPhotoBrowser_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BUKPhotoBrowser_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		65DD64491B79EE6000A243AC /* BUKDemoActionBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BUKDemoActionBar.h; sourceTree = "<group>"; };
+		65DD644A1B79EE6000A243AC /* BUKDemoActionBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BUKDemoActionBar.m; sourceTree = "<group>"; };
 		806F9E66BEBF5D7E82D45257 /* BUKPhotoBrowser.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BUKPhotoBrowser.podspec; path = ../BUKPhotoBrowser.podspec; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		DD4D30A7A0550BC2FC25A5F1 /* Pods_BUKPhotoBrowser_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BUKPhotoBrowser_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,8 +122,8 @@
 		6003F58B195388D20070C39A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6003F58A195388D20070C39A /* BUKPhotoBrowser.app */,
-				6003F5AE195388D20070C39A /* Tests.xctest */,
+				6003F58A195388D20070C39A /* BUKPhotoBrowser_Example.app */,
+				6003F5AE195388D20070C39A /* BUKPhotoBrowser_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -148,6 +151,8 @@
 				6003F5A6195388D20070C39A /* BUKViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				65DD64491B79EE6000A243AC /* BUKDemoActionBar.h */,
+				65DD644A1B79EE6000A243AC /* BUKDemoActionBar.m */,
 			);
 			name = "Example for BUKPhotoBrowser";
 			path = BUKPhotoBrowser;
@@ -213,7 +218,7 @@
 			);
 			name = BUKPhotoBrowser_Example;
 			productName = BUKPhotoBrowser;
-			productReference = 6003F58A195388D20070C39A /* BUKPhotoBrowser.app */;
+			productReference = 6003F58A195388D20070C39A /* BUKPhotoBrowser_Example.app */;
 			productType = "com.apple.product-type.application";
 		};
 		6003F5AD195388D20070C39A /* BUKPhotoBrowser_Tests */ = {
@@ -234,7 +239,7 @@
 			);
 			name = BUKPhotoBrowser_Tests;
 			productName = BUKPhotoBrowserTests;
-			productReference = 6003F5AE195388D20070C39A /* Tests.xctest */;
+			productReference = 6003F5AE195388D20070C39A /* BUKPhotoBrowser_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -393,6 +398,7 @@
 				6003F59E195388D20070C39A /* BUKAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* BUKViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				65DD644B1B79EE6000A243AC /* BUKDemoActionBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,6 +521,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BUKPhotoBrowser/BUKPhotoBrowser-Prefix.pch";
 				INFOPLIST_FILE = "BUKPhotoBrowser/BUKPhotoBrowser-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -530,6 +537,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BUKPhotoBrowser/BUKPhotoBrowser-Prefix.pch";
 				INFOPLIST_FILE = "BUKPhotoBrowser/BUKPhotoBrowser-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
