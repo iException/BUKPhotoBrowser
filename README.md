@@ -1,13 +1,12 @@
 # BUKPhotoBrowser
 
-[![CI Status](http://img.shields.io/travis/hyice/BUKPhotoBrowser.svg?style=flat)](https://travis-ci.org/hyice/BUKPhotoBrowser)
-[![Version](https://img.shields.io/cocoapods/v/BUKPhotoBrowser.svg?style=flat)](http://cocoapods.org/pods/BUKPhotoBrowser)
-[![License](https://img.shields.io/cocoapods/l/BUKPhotoBrowser.svg?style=flat)](http://cocoapods.org/pods/BUKPhotoBrowser)
-[![Platform](https://img.shields.io/cocoapods/p/BUKPhotoBrowser.svg?style=flat)](http://cocoapods.org/pods/BUKPhotoBrowser)
+BUKPhotoBrowser is used to view photos. You can pinch to scale the photo size, tap
+to dismiss browser, pan to switch photo and so on. You alse can custom the toolbar
+for special usage.
 
 ## Usage
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+Download the code and rea
 
 ## Requirements
 
