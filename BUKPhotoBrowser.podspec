@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "BUKPhotoBrowser"
-  s.version          = "1.0.0"
+  s.version          = "1.0.1"
   s.summary          = "A photo browser library."
   s.description      = <<-DESC
                        BUKPhotoBrowser is used to view large photos. You can pinch to scale the photo size,

@@ -174,11 +174,9 @@
 
 - (void)scaleImageView:(CGFloat)scale center:(CGPoint)center
 {
-    if (scale == 1.0) {
-        return;
-    }
+    CGFloat rate = 1 - scale;
     
-    if (!isfinite(scale)) {
+    if (isnan(rate) || isinf(rate) || rate == 0) {
         return;
     }
     
@@ -187,10 +185,17 @@
     CGFloat topLength = center.y;
     CGFloat bottomLength = CGRectGetHeight(self.imageView.frame) - topLength;
     
-    self.imageViewLeftConstraint.constant += leftLength * (1 - scale);
-    self.imageViewRightConstraint.constant -= rightLength * (1 - scale);
-    self.imageViewTopConstraint.constant += topLength * (1 - scale);
-    self.imageViewBottomConstraint.constant -= bottomLength * (1 - scale);
+    if (isnan(leftLength) || isinf(leftLength)
+        || isnan(rightLength) || isinf(rightLength)
+        || isnan(topLength) || isinf(topLength)
+        || isnan(bottomLength) || isinf(bottomLength)) {
+        return;
+    }
+    
+    self.imageViewLeftConstraint.constant += leftLength * rate;
+    self.imageViewRightConstraint.constant -= rightLength * rate;
+    self.imageViewTopConstraint.constant += topLength * rate;
+    self.imageViewBottomConstraint.constant -= bottomLength * rate;
     [self setNeedsLayout];
 }
 
