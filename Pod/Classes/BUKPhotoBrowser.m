@@ -73,7 +73,7 @@ static const CGFloat kBUKViewPadding = 10;
     }
     
     if (self.navigationController) {
-        [self.navigationController setNavigationBarHidden:YES animated:NO];
+        [self.navigationController setNavigationBarHidden:YES animated:animated];
     }
     
     [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
@@ -84,7 +84,7 @@ static const CGFloat kBUKViewPadding = 10;
     [super viewWillDisappear:animated];
     
     if (self.navigationController) {
-        [self.navigationController setNavigationBarHidden:self.buk_originNavigationHidden animated:NO];
+        [self.navigationController setNavigationBarHidden:self.buk_originNavigationHidden animated:animated];
     }
     
     [[UIApplication sharedApplication] setStatusBarHidden:self.buk_originStatusBarHidden withAnimation:UIStatusBarAnimationNone];
