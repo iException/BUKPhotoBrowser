@@ -58,18 +58,28 @@
         return;
     }
     
-    if (self.photoUrl) {
-        __block CGFloat progress = 0;
-        [[SDWebImageManager sharedManager] downloadImageWithURL:self.photoUrl options:SDWebImageProgressiveDownload progress:^(NSInteger receivedSize, NSInteger expectedSize) {
-            progress = receivedSize * 1.0 / expectedSize;
-        } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
-            if (finished) {
-                progress = 1.0;
-                self.photo = image;
-            }
-            handler(image, progress);
-        }];
+    if (!self.photoUrl) {
+        handler(nil, 1.0);
+        return;
     }
+    
+    UIImage *photo = [UIImage imageWithContentsOfFile:self.photoUrl.absoluteString];
+    if (photo) {
+        self.photo = photo;
+        handler(photo, 1.0);
+        return;
+    }
+    
+    __block CGFloat progress = 0;
+    [[SDWebImageManager sharedManager] downloadImageWithURL:self.photoUrl options:SDWebImageProgressiveDownload progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+        progress = receivedSize * 1.0 / expectedSize;
+    } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+        if (finished) {
+            progress = 1.0;
+            self.photo = image;
+        }
+        handler(image, progress);
+    }];
 }
 
 @end
