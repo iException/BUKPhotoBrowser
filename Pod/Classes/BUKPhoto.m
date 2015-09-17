@@ -20,6 +20,8 @@
 
 - (instancetype)initWithUrl:(NSURL *)photoUrl
 {
+    NSAssert([photoUrl isKindOfClass:[NSURL class]], @"BUKPhoto: photoUrl is not NSURL!");
+    
     self = [super init];
     
     if (self) {
@@ -31,6 +33,8 @@
 
 - (instancetype)initWithImage:(UIImage *)image
 {
+    NSAssert([image isKindOfClass:[UIImage class]], @"BUKPhoto: image is not UIImage!");
+    
     self = [super init];
     
     if (self) {
