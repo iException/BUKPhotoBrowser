@@ -23,6 +23,7 @@
 @protocol BUKPhotoBrowserDelegate <NSObject>
 
 - (void)buk_photoBrowser:(BUKPhotoBrowser *)browser didScrollToIndex:(NSInteger)index;
+- (void)buk_photoBrowserWillDismiss:(BUKPhotoBrowser *)browser;
 
 @end
 

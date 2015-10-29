@@ -142,6 +142,10 @@ static const CGFloat kBUKViewPadding = 10;
 #pragma mark - events -
 - (void)buk_goBack:(id)sender
 {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(buk_photoBrowserWillDismiss:)]) {
+        [self.delegate buk_photoBrowserWillDismiss:self];
+    }
+    
     if (!self.navigationController || self.navigationController.viewControllers.count == 1) {
         [self dismissViewControllerAnimated:YES completion:nil];
     }else {
