@@ -46,6 +46,22 @@
  */
 @property (nonatomic, strong) UIView *actionBar;
 
+/**
+ *  If you still ned navigation bar in photo browser, set this flag to YES. Default is NO.
+ */
+@property (nonatomic, assign) BOOL showNavigationBar;
+
+/**
+ *  If you still ned status bar in photo browser, set this flag to YES. Default is NO.
+ */
+@property (nonatomic, assign) BOOL showStatusBar;
+
+/**
+ *  User can tap photo to dismiss/pop photo browser by default.
+ *  If you don't want this feature, you can set this flag to YES.
+ */
+@property (nonatomic, assign) BOOL disableTapToDismiss;
+
 @property (nonatomic, weak) id<BUKPhotoBrowserDelegate> delegate;
 
 - (instancetype)initWithDataSource:(id<BUKPhotoBrowserDataSource>)dataSource

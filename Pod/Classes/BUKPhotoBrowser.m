@@ -73,10 +73,10 @@ static const CGFloat kBUKViewPadding = 10;
     }
     
     if (self.navigationController) {
-        [self.navigationController setNavigationBarHidden:YES animated:animated];
+        [self.navigationController setNavigationBarHidden:!self.showNavigationBar animated:animated];
     }
     
-    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
+    [[UIApplication sharedApplication] setStatusBarHidden:!self.showStatusBar withAnimation:UIStatusBarAnimationNone];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -92,7 +92,7 @@ static const CGFloat kBUKViewPadding = 10;
 
 - (BOOL)prefersStatusBarHidden
 {
-    return YES;
+    return !self.showStatusBar;
 }
 
 #pragma mark - public -
@@ -142,6 +142,10 @@ static const CGFloat kBUKViewPadding = 10;
 #pragma mark - events -
 - (void)buk_goBack:(id)sender
 {
+    if (self.disableTapToDismiss) {
+        return;
+    }
+
     if (self.delegate && [self.delegate respondsToSelector:@selector(buk_photoBrowserWillDismiss:)]) {
         [self.delegate buk_photoBrowserWillDismiss:self];
     }
@@ -354,7 +358,30 @@ static const CGFloat kBUKViewPadding = 10;
     return CGPointMake(leftX * (toLeft? -1 : 1), leftY * (toTop? -1 : 1));
 }
 
-#pragma mark - getters && setters -
+#pragma mark - setters -
+- (void)setShowNavigationBar:(BOOL)showNavigationBar
+{
+    [self willChangeValueForKey:NSStringFromSelector(@selector(showNavigationBar))];
+    _showNavigationBar = showNavigationBar;
+    [self didChangeValueForKey:NSStringFromSelector(@selector(showNavigationBar))];
+
+    if (self.navigationController && self.buk_hasAppeared) {
+        [self.navigationController setNavigationBarHidden:!self.showNavigationBar animated:YES];
+    }
+}
+
+- (void)setShowStatusBar:(BOOL)showStatusBar
+{
+    [self willChangeValueForKey:NSStringFromSelector(@selector(showStatusBar))];
+    _showStatusBar = showStatusBar;
+    [self didChangeValueForKey:NSStringFromSelector(@selector(showStatusBar))];
+
+    if (self.buk_hasAppeared) {
+        [[UIApplication sharedApplication] setStatusBarHidden:!self.showStatusBar withAnimation:UIStatusBarAnimationNone];
+    }
+}
+
+#pragma mark - getters -
 - (UITapGestureRecognizer *)buk_backTapGesture
 {
     UITapGestureRecognizer *backTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(buk_goBack:)];
