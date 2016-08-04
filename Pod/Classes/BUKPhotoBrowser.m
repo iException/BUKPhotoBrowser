@@ -54,7 +54,7 @@ static const CGFloat kBUKViewPadding = 10;
     
     self.view.backgroundColor = [UIColor blackColor];
     self.view.clipsToBounds = YES;
-    
+    [self.view addGestureRecognizer:[self buk_longTapGesture]];
     [self.view addGestureRecognizer:[self buk_backTapGesture]];
     [self.view addGestureRecognizer:[self buk_panGesture]];
     
@@ -140,6 +140,13 @@ static const CGFloat kBUKViewPadding = 10;
 }
 
 #pragma mark - events -
+- (void)buk_savePhoto:(UILongPressGestureRecognizer *)sender
+{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(buk_photoBrowserDidLongPressed:)] && sender.state == UIGestureRecognizerStateBegan) {
+        [self.delegate buk_photoBrowserDidLongPressed:self];
+    }
+}
+
 - (void)buk_goBack:(id)sender
 {
     if (self.disableTapToDismiss) {
@@ -382,6 +389,12 @@ static const CGFloat kBUKViewPadding = 10;
 }
 
 #pragma mark - getters -
+- (UILongPressGestureRecognizer *)buk_longTapGesture
+{
+    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(buk_savePhoto:)];
+    return longPress;
+}
+
 - (UITapGestureRecognizer *)buk_backTapGesture
 {
     UITapGestureRecognizer *backTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(buk_goBack:)];

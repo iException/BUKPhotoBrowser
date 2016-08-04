@@ -10,7 +10,7 @@
 #import <BUKPhotoBrowser/BUKPhotoBrowser.h>
 #import "BUKDemoActionBar.h"
 
-@interface BUKViewController () <BUKPhotoBrowserDataSource, BUKPhotoBrowserDelegate>
+@interface BUKViewController () <BUKPhotoBrowserDataSource, BUKPhotoBrowserDelegate, UIActionSheetDelegate>
 
 @property (nonatomic, strong) NSMutableArray *photos;
 @property (nonatomic, assign) NSInteger coverIndex;
@@ -56,6 +56,20 @@
     self.browser = browser;
 }
 
+#pragma mark - UIActionSheetDelegate
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1) {
+        // save
+        BUKPhoto *photo = [self.photos objectAtIndex:self.browser.currentIndex];
+        [photo getPhoto:^(UIImage *image, CGFloat progress) {
+            if (progress == 1.0) {
+                UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
+            }
+        }];
+    }
+}
+
 #pragma mark - BUKPhotoBrowserDataSource
 - (NSInteger)buk_numberOfPhotosForBrowser:(BUKPhotoBrowser *)browser
 {
@@ -68,6 +82,13 @@
 }
 
 #pragma mark - BUKPhotoBrowserDelegate
+- (void)buk_photoBrowserDidLongPressed:(BUKPhotoBrowser *)browser
+{
+    UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"保存到相册" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles: nil];
+    [sheet addButtonWithTitle:@"保存"];
+    [sheet showInView:self.view];
+}
+
 - (void)buk_photoBrowser:(BUKPhotoBrowser *)browser didScrollToIndex:(NSInteger)index
 {
     BUKDemoActionBar *actionBar = (BUKDemoActionBar *)browser.actionBar;
