@@ -140,7 +140,7 @@ static const CGFloat kBUKViewPadding = 10;
 }
 
 #pragma mark - events -
-- (void)buk_savePhoto:(UILongPressGestureRecognizer *)sender
+- (void)buk_longPressHandler:(UILongPressGestureRecognizer *)sender
 {
     if (self.delegate && [self.delegate respondsToSelector:@selector(buk_photoBrowserDidLongPressed:)] && sender.state == UIGestureRecognizerStateBegan) {
         [self.delegate buk_photoBrowserDidLongPressed:self];
@@ -391,7 +391,7 @@ static const CGFloat kBUKViewPadding = 10;
 #pragma mark - getters -
 - (UILongPressGestureRecognizer *)buk_longTapGesture
 {
-    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(buk_savePhoto:)];
+    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(buk_longPressHandler:)];
     return longPress;
 }
 
