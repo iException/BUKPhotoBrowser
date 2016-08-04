@@ -252,9 +252,6 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = hyice;
 				TargetAttributes = {
-					6003F589195388D20070C39A = {
-						DevelopmentTeam = L5B4TBT7H9;
-					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -521,7 +518,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = L5B4TBT7H9;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BUKPhotoBrowser/BUKPhotoBrowser-Prefix.pch";
 				INFOPLIST_FILE = "BUKPhotoBrowser/BUKPhotoBrowser-Info.plist";
@@ -538,7 +535,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = L5B4TBT7H9;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BUKPhotoBrowser/BUKPhotoBrowser-Prefix.pch";
 				INFOPLIST_FILE = "BUKPhotoBrowser/BUKPhotoBrowser-Info.plist";

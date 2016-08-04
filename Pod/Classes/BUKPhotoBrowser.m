@@ -54,7 +54,7 @@ static const CGFloat kBUKViewPadding = 10;
     
     self.view.backgroundColor = [UIColor blackColor];
     self.view.clipsToBounds = YES;
-    [self.view addGestureRecognizer:[self buk_longTapGesture]];
+    [self.view addGestureRecognizer:[self buk_longPressHandler]];
     [self.view addGestureRecognizer:[self buk_backTapGesture]];
     [self.view addGestureRecognizer:[self buk_panGesture]];
     
@@ -142,8 +142,8 @@ static const CGFloat kBUKViewPadding = 10;
 #pragma mark - events -
 - (void)buk_longPressHandler:(UILongPressGestureRecognizer *)sender
 {
-    if (self.delegate && [self.delegate respondsToSelector:@selector(buk_photoBrowserDidLongPressed:)] && sender.state == UIGestureRecognizerStateBegan) {
-        [self.delegate buk_photoBrowserDidLongPressed:self];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(buk_photoBrowser:didLongPressAtIndex:)] && sender.state == UIGestureRecognizerStateBegan) {
+        [self.delegate buk_photoBrowser:self didLongPressAtIndex:self.currentIndex];
     }
 }
 
@@ -389,7 +389,7 @@ static const CGFloat kBUKViewPadding = 10;
 }
 
 #pragma mark - getters -
-- (UILongPressGestureRecognizer *)buk_longTapGesture
+- (UILongPressGestureRecognizer *)buk_longPressHandler
 {
     UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(buk_longPressHandler:)];
     return longPress;

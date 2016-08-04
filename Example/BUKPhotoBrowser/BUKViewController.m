@@ -82,7 +82,7 @@
 }
 
 #pragma mark - BUKPhotoBrowserDelegate
-- (void)buk_photoBrowserDidLongPressed:(BUKPhotoBrowser *)browser
+- (void)buk_photoBrowser:(BUKPhotoBrowser *)browser didLongPressAtIndex:(NSInteger)index
 {
     UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"保存到相册" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles: nil];
     [sheet addButtonWithTitle:@"保存"];
