@@ -25,6 +25,7 @@
 @optional
 - (void)buk_photoBrowser:(BUKPhotoBrowser *)browser didScrollToIndex:(NSInteger)index;
 - (void)buk_photoBrowserWillDismiss:(BUKPhotoBrowser *)browser;
+- (void)buk_photoBrowser:(BUKPhotoBrowser *)browser didLongPressAtIndex:(NSInteger)index;
 
 @end
 
