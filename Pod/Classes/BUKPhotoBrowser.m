@@ -1,9 +1,9 @@
 //
 //  BUKPhotoBrowser.m
-//  Pods
+//  BUKPhotoBrowser
 //
 //  Created by hyice on 15/8/11.
-//
+//  Copyright (c) 2015 - 2017 Baixing, Inc. All rights reserved.
 //
 
 #import "BUKPhotoBrowser.h"
@@ -212,10 +212,14 @@ static const CGFloat kBUKViewPadding = 10;
     if (index >= [self buk_totalPhotosCount]) {
         return nil;
     }
-    
+
+    BUKPhoto *photo = [self buk_photoForIndex:index];
     BUKPhotoView *photoView = [[BUKPhotoView alloc] initWithFrame:[self buk_photoViewFrameAtIndex:index]];
+    if ([self.buk_dataSource respondsToSelector:@selector(buk_photoBrowser:contentViewForPhoto:atIndex:)]) {
+        photoView.contentView = [self.buk_dataSource buk_photoBrowser:self contentViewForPhoto:photo atIndex:index];
+    }
     
-    [photoView setupViewWithPhoto:[self buk_photoForIndex:index]];
+    [photoView setupViewWithPhoto:photo];
     
     return photoView;
 }
@@ -341,7 +345,7 @@ static const CGFloat kBUKViewPadding = 10;
     CGFloat leftX = fabs(originTranslation.x);
     CGFloat leftY = fabs(originTranslation.y);
     
-    CGFloat needForX = [self.buk_centerView imageOverflowLengthForDirection:toLeft? BUKPhotoViewOverflowRightDirection : BUKPhotoViewOverflowLeftDirection];
+    CGFloat needForX = [self.buk_centerView contentOverflowLengthForDirection:toLeft? BUKPhotoViewOverflowRightDirection : BUKPhotoViewOverflowLeftDirection];
     CGFloat actualForX;
     if (needForX > leftX) {
         actualForX = leftX;
@@ -351,7 +355,7 @@ static const CGFloat kBUKViewPadding = 10;
         leftX -= needForX;
     }
     
-    CGFloat needForY = [self.buk_centerView imageOverflowLengthForDirection:toTop? BUKPhotoViewOverflowBottomDirection : BUKPhotoViewOverflowTopDirection];
+    CGFloat needForY = [self.buk_centerView contentOverflowLengthForDirection:toTop? BUKPhotoViewOverflowBottomDirection : BUKPhotoViewOverflowTopDirection];
     CGFloat actualForY;
     if (needForY > leftY) {
         actualForY = leftY;

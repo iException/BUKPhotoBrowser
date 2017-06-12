@@ -1,102 +1,122 @@
 //
 //  BUKPhotoView.m
-//  Pods
+//  BUKPhotoBrowser
 //
 //  Created by hyice on 15/8/11.
-//
+//  Copyright (c) 2015 - 2017 Baixing, Inc. All rights reserved.
 //
 
 #import "BUKPhotoView.h"
 #import "BUKPhoto.h"
+#import "BUKPhotoImageContentView.h"
 
 @interface BUKPhotoView ()
 
-@property (strong, nonatomic) UIImageView *imageView;
-
-@property (weak, nonatomic) NSLayoutConstraint *imageViewLeftConstraint;
-@property (weak, nonatomic) NSLayoutConstraint *imageViewRightConstraint;
-@property (weak, nonatomic) NSLayoutConstraint *imageViewTopConstraint;
-@property (weak, nonatomic) NSLayoutConstraint *imageViewBottomConstraint;
-
-@property (assign, nonatomic) CGFloat photoWidthRate;
-@property (assign, nonatomic) CGFloat photoHeightRate;
-@property (assign, nonatomic) CGSize maxPhotoSize;
-
-@property (strong, nonatomic) UIActivityIndicatorView *loadingIndicator;
+@property (nonatomic, weak) BUKPhoto *photo;
+@property (nonatomic, weak) NSLayoutConstraint *contentViewLeftConstraint;
+@property (nonatomic, weak) NSLayoutConstraint *contentViewRightConstraint;
+@property (nonatomic, weak) NSLayoutConstraint *contentViewTopConstraint;
+@property (nonatomic, weak) NSLayoutConstraint *contentViewBottomConstraint;
+@property (nonatomic, assign) CGFloat contentWidthRatio;
+@property (nonatomic, assign) CGFloat contentHeightRatio;
+@property (nonatomic, assign) CGSize maxContentSize;
 
 @end
 
 @implementation BUKPhotoView
 
-- (instancetype)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    
-    if (self) {
-        self.clipsToBounds = YES;
-        [self initImageView];
-        [self initPinchGesture];
-        [self initLoadingIndicator];
+@synthesize contentView = _contentView;
+
+#pragma mark - Accessors
+
+- (UIView<BUKPhotoContentView> *)contentView {
+    if (!_contentView) {
+        self.contentView = [[BUKPhotoImageContentView alloc] initWithFrame:self.bounds];
     }
-    
+    return _contentView;
+}
+
+
+- (void)setContentView:(UIView<BUKPhotoContentView> *)contentView {
+    [_contentView removeFromSuperview];
+    _contentView = contentView;
+    _contentView.translatesAutoresizingMaskIntoConstraints = NO;
+    [_contentView setPhoto:self.photo withPhotoView:self];
+    [self addSubview:_contentView];
+    [self setupViewConstraints];
+    [self setupGestureRecognizer];
+}
+
+
+#pragma mark - UIView
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    if ((self = [super initWithFrame:frame])) {
+        self.clipsToBounds = YES;
+    }
     return self;
 }
 
-- (void)setupViewWithPhoto:(BUKPhoto *)photo
-{
-    if (!photo) {
-        return;
+
+#pragma mark - Actions
+
+- (void)pinch:(UIPinchGestureRecognizer *)pinch {
+    CGPoint center = [pinch locationInView:self.contentView];
+    [self scaleContentView:pinch.scale center:center];
+
+    pinch.scale = 1;
+
+    if (pinch.state == UIGestureRecognizerStateEnded || pinch.state == UIGestureRecognizerStateCancelled) {
+        [self checkAndAdjustPosition:YES];
     }
-    [self.loadingIndicator startAnimating];
-    [photo getPhoto:^(UIImage *image, CGFloat progress) {
-        [self.imageView setImage:image];
-        
-        if (progress == 1.0) {
-            [self setupConfigurationWithImage:image];
-            [self.loadingIndicator stopAnimating];
-        }
-    }];
 }
 
-- (void)translateImage:(CGPoint)translation animated:(BOOL)animated
-{
+
+#pragma mark - Public
+
+- (void)setupViewWithPhoto:(BUKPhoto *)photo {
+    [self.contentView setPhoto:photo withPhotoView:self];
+}
+
+
+- (void)translateImage:(CGPoint)translation animated:(BOOL)animated {
     if (translation.x == 0 && translation.y == 0) {
         return;
     }
     
-    self.imageViewLeftConstraint.constant += translation.x;
-    self.imageViewRightConstraint.constant += translation.x;
-    self.imageViewTopConstraint.constant += translation.y;
-    self.imageViewBottomConstraint.constant += translation.y;
+    self.contentViewLeftConstraint.constant += translation.x;
+    self.contentViewRightConstraint.constant += translation.x;
+    self.contentViewTopConstraint.constant += translation.y;
+    self.contentViewBottomConstraint.constant += translation.y;
     
     [self checkAndAdjustPosition:animated];
 }
 
-- (CGFloat)imageOverflowLengthForDirection:(BUKPhotoViewOverflowDirection)direction
-{
+
+- (CGFloat)contentOverflowLengthForDirection:(BUKPhotoViewOverflowDirection)direction {
     CGFloat viewOverflow;
     CGFloat emptyLength;
     
     switch (direction) {
         case BUKPhotoViewOverflowLeftDirection: {
-            viewOverflow = -self.imageViewLeftConstraint.constant;
+            viewOverflow = -self.contentViewLeftConstraint.constant;
             emptyLength = [self emptyLengthToHorizontalBorder];
             break;
         }
         case BUKPhotoViewOverflowRightDirection: {
-            viewOverflow = self.imageViewRightConstraint.constant;
+            viewOverflow = self.contentViewRightConstraint.constant;
             emptyLength = [self emptyLengthToHorizontalBorder];
             break;
         }
             
         case BUKPhotoViewOverflowTopDirection: {
-            viewOverflow = -self.imageViewTopConstraint.constant;
+            viewOverflow = -self.contentViewTopConstraint.constant;
             emptyLength = [self emptyLengthToVerticalBorder];
             break;
         }
             
         case BUKPhotoViewOverflowBottomDirection: {
-            viewOverflow = self.imageViewBottomConstraint.constant;
+            viewOverflow = self.contentViewBottomConstraint.constant;
             emptyLength = [self emptyLengthToVerticalBorder];
             break;
         }
@@ -108,72 +128,68 @@
     return viewOverflow > emptyLength? viewOverflow - emptyLength : 0;
 }
 
-#pragma mark - photo configuration
-- (void)setupConfigurationWithImage:(UIImage *)image
-{
+
+- (void)adjustWithContentSize:(CGSize)size {
     CGFloat viewWidth = CGRectGetWidth(self.frame);
     CGFloat viewHeight = CGRectGetHeight(self.frame);
     CGFloat viewRatio = viewWidth / viewHeight;
-    
-    CGFloat imageWidth = image.size.width;
-    CGFloat imageHeight = image.size.height;
+
+    CGFloat imageWidth = size.width;
+    CGFloat imageHeight = size.height;
     CGFloat imageRatio = imageWidth / imageHeight;
-    
+
     CGFloat maxWidth;
     CGFloat maxHeight;
     if (viewRatio == imageRatio) {
-        self.photoWidthRate = 1.0;
-        self.photoHeightRate = 1.0;
+        self.contentWidthRatio = 1.0;
+        self.contentHeightRatio = 1.0;
         maxWidth = MAX(imageWidth, viewWidth);
         maxHeight = maxWidth / imageRatio;
     }else if (viewRatio > imageRatio) {
-        self.photoWidthRate = imageRatio / viewRatio;
-        self.photoHeightRate = 1.0;
+        self.contentWidthRatio = imageRatio / viewRatio;
+        self.contentHeightRatio = 1.0;
         maxWidth = MAX(imageWidth, viewWidth);
-        maxWidth /= self.photoWidthRate;
+        maxWidth /= self.contentWidthRatio;
         maxHeight = maxWidth / viewRatio;
     }else {
-        self.photoWidthRate = 1.0;
-        self.photoHeightRate = viewRatio / imageRatio;
+        self.contentWidthRatio = 1.0;
+        self.contentHeightRatio = viewRatio / imageRatio;
         maxHeight = MAX(imageHeight, viewHeight);
-        maxHeight /= self.photoHeightRate;
+        maxHeight /= self.contentHeightRatio;
         maxWidth = maxHeight * viewRatio;
     }
-    self.maxPhotoSize = CGSizeMake(maxWidth, maxHeight);
+    self.maxContentSize = CGSizeMake(maxWidth, maxHeight);
 }
 
-- (CGFloat)emptyLengthToHorizontalBorder
-{
-    return CGRectGetWidth(self.imageView.frame) * (1.0 - self.photoWidthRate)/2.0;
+
+#pragma mark - Private
+
+- (void)setupViewConstraints {
+    self.contentViewLeftConstraint = [NSLayoutConstraint constraintWithItem:self.contentView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeft multiplier:1.0 constant:0];
+    self.contentViewRightConstraint = [NSLayoutConstraint constraintWithItem:self.contentView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeRight multiplier:1.0 constant:0];
+    self.contentViewTopConstraint = [NSLayoutConstraint constraintWithItem:self.contentView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1.0 constant:0];
+    self.contentViewBottomConstraint = [NSLayoutConstraint constraintWithItem:self.contentView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0];
+    [NSLayoutConstraint activateConstraints:@[self.contentViewLeftConstraint, self.contentViewRightConstraint, self.contentViewTopConstraint, self.contentViewBottomConstraint]];
 }
 
-- (CGFloat)emptyLengthToVerticalBorder
-{
-    return CGRectGetHeight(self.imageView.frame) * (1.0 - self.photoHeightRate)/2.0;
+
+- (void)setupGestureRecognizer {
+    [self.contentView addGestureRecognizer:[[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinch:)]];
+    self.contentView.userInteractionEnabled = YES;
 }
 
-#pragma mark - pinch
-- (void)initPinchGesture
-{
-    UIPinchGestureRecognizer *pinch = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinch:)];
-    [self.imageView addGestureRecognizer:pinch];
-    self.imageView.userInteractionEnabled = YES;
+
+- (CGFloat)emptyLengthToHorizontalBorder {
+    return CGRectGetWidth(self.contentView.frame) * (1.0 - self.contentWidthRatio) / 2.0;
 }
 
-- (void)pinch:(UIPinchGestureRecognizer *)pinch
-{
-    CGPoint center = [pinch locationInView:self.imageView];
-    [self scaleImageView:pinch.scale center:center];
-    
-    pinch.scale = 1;
-    
-    if (pinch.state == UIGestureRecognizerStateEnded || pinch.state == UIGestureRecognizerStateCancelled) {
-        [self checkAndAdjustPosition:YES];
-    }
+
+- (CGFloat)emptyLengthToVerticalBorder {
+    return CGRectGetHeight(self.contentView.frame) * (1.0 - self.contentHeightRatio) / 2.0;
 }
 
-- (void)scaleImageView:(CGFloat)scale center:(CGPoint)center
-{
+
+- (void)scaleContentView:(CGFloat)scale center:(CGPoint)center {
     CGFloat rate = 1 - scale;
     
     if (isnan(rate) || isinf(rate) || rate == 0) {
@@ -181,9 +197,9 @@
     }
     
     CGFloat leftLength = center.x;
-    CGFloat rightLength = CGRectGetWidth(self.imageView.frame) - leftLength;
+    CGFloat rightLength = CGRectGetWidth(self.contentView.frame) - leftLength;
     CGFloat topLength = center.y;
-    CGFloat bottomLength = CGRectGetHeight(self.imageView.frame) - topLength;
+    CGFloat bottomLength = CGRectGetHeight(self.contentView.frame) - topLength;
     
     if (isnan(leftLength) || isinf(leftLength)
         || isnan(rightLength) || isinf(rightLength)
@@ -192,15 +208,15 @@
         return;
     }
     
-    self.imageViewLeftConstraint.constant += leftLength * rate;
-    self.imageViewRightConstraint.constant -= rightLength * rate;
-    self.imageViewTopConstraint.constant += topLength * rate;
-    self.imageViewBottomConstraint.constant -= bottomLength * rate;
+    self.contentViewLeftConstraint.constant += leftLength * rate;
+    self.contentViewRightConstraint.constant -= rightLength * rate;
+    self.contentViewTopConstraint.constant += topLength * rate;
+    self.contentViewBottomConstraint.constant -= bottomLength * rate;
     [self setNeedsLayout];
 }
 
-- (void)checkAndAdjustPosition:(BOOL)animated
-{
+
+- (void)checkAndAdjustPosition:(BOOL)animated {
     if (animated) {
         [UIView animateWithDuration:0.25f animations:^{
             [self checkAndAdjustPositionWithoutAnimation];
@@ -210,17 +226,17 @@
     }
 }
 
-- (void)checkAndAdjustPositionWithoutAnimation
-{
+
+- (void)checkAndAdjustPositionWithoutAnimation {
     CGFloat viewWidth = CGRectGetWidth(self.frame);
-    CGFloat imageViewWidth = CGRectGetWidth(self.imageView.frame);
-    CGFloat actualPhotoWidth = imageViewWidth * self.photoWidthRate;
+    CGFloat contentViewWidth = CGRectGetWidth(self.contentView.frame);
+    CGFloat actualPhotoWidth = contentViewWidth * self.contentWidthRatio;
     
     CGFloat viewHeight = CGRectGetHeight(self.frame);
-    CGFloat imageViewHeight = CGRectGetHeight(self.imageView.frame);
-    CGFloat actualPhotoHeight = imageViewHeight * self.photoHeightRate;
+    CGFloat contentViewHeight = CGRectGetHeight(self.contentView.frame);
+    CGFloat actualPhotoHeight = contentViewHeight * self.contentHeightRatio;
     
-    if (actualPhotoWidth == 0 || actualPhotoHeight == 0 || imageViewWidth == 0 || imageViewHeight == 0) {
+    if (actualPhotoWidth == 0 || actualPhotoHeight == 0 || contentViewWidth == 0 || contentViewHeight == 0) {
         return;
     }
     
@@ -228,116 +244,61 @@
     
     CGFloat scale = 1.0;
     
-    if (self.photoWidthRate == 1.0 && actualPhotoWidth < viewWidth) {
+    if (self.contentWidthRatio == 1.0 && actualPhotoWidth < viewWidth) {
         scale = viewWidth / actualPhotoWidth;
-    }else if (self.photoHeightRate == 1.0 && actualPhotoHeight < viewHeight) {
+    } else if (self.contentHeightRatio == 1.0 && actualPhotoHeight < viewHeight) {
         scale = viewHeight / actualPhotoHeight;
-    }
-    else if (self.photoWidthRate != 1.0 && imageViewWidth > self.maxPhotoSize.width) {
-        scale = self.maxPhotoSize.width / imageViewWidth;
-    }else if (self.photoHeightRate != 1.0 && imageViewHeight > self.maxPhotoSize.height) {
-        scale = self.maxPhotoSize.height / imageViewHeight;
+    } else if (self.contentWidthRatio != 1.0 && contentViewWidth > self.maxContentSize.width) {
+        scale = self.maxContentSize.width / contentViewWidth;
+    } else if (self.contentHeightRatio != 1.0 && contentViewHeight > self.maxContentSize.height) {
+        scale = self.maxContentSize.height / contentViewHeight;
     }
     
-    CGPoint center = CGPointMake(self.center.x - CGRectGetMinX(self.imageView.frame), self.center.y - CGRectGetMinY(self.imageView.frame));
-    [self scaleImageView:scale center:center];
+    CGPoint center = CGPointMake(self.center.x - CGRectGetMinX(self.contentView.frame), self.center.y - CGRectGetMinY(self.contentView.frame));
+    [self scaleContentView:scale center:center];
     
     // translate image to specified position
-    imageViewWidth = imageViewWidth * scale;
+    contentViewWidth = contentViewWidth * scale;
     actualPhotoWidth = round(actualPhotoWidth * scale);
     
-    imageViewHeight = imageViewHeight * scale;
+    contentViewHeight = contentViewHeight * scale;
     actualPhotoHeight = round(actualPhotoHeight * scale);
     
-    if (actualPhotoWidth < viewWidth && self.photoWidthRate != 1.0) { // centre
-        CGFloat xPadding = (imageViewWidth - viewWidth)/2.0;
-        self.imageViewLeftConstraint.constant = -xPadding;
-        self.imageViewRightConstraint.constant = xPadding;
-    }else { // pin to border if has empty space
-        CGFloat horizontalEmptyLength = imageViewWidth * (1.0 - self.photoWidthRate)/2.0;
-        if (self.imageViewLeftConstraint.constant > -horizontalEmptyLength) {
-            CGFloat offset = -horizontalEmptyLength - self.imageViewLeftConstraint.constant;
-            self.imageViewLeftConstraint.constant += offset;
-            self.imageViewRightConstraint.constant += offset;
-        }else if (self.imageViewRightConstraint.constant < horizontalEmptyLength) {
-            CGFloat offset = horizontalEmptyLength - self.imageViewRightConstraint.constant;
-            self.imageViewRightConstraint.constant += offset;
-            self.imageViewLeftConstraint.constant += offset;
+    if (actualPhotoWidth < viewWidth && self.contentWidthRatio != 1.0) { // centre
+        CGFloat xPadding = (contentViewWidth - viewWidth)/2.0;
+        self.contentViewLeftConstraint.constant = -xPadding;
+        self.contentViewRightConstraint.constant = xPadding;
+    } else { // pin to border if has empty space
+        CGFloat horizontalEmptyLength = contentViewWidth * (1.0 - self.contentWidthRatio)/2.0;
+        if (self.contentViewLeftConstraint.constant > -horizontalEmptyLength) {
+            CGFloat offset = -horizontalEmptyLength - self.contentViewLeftConstraint.constant;
+            self.contentViewLeftConstraint.constant += offset;
+            self.contentViewRightConstraint.constant += offset;
+        }else if (self.contentViewRightConstraint.constant < horizontalEmptyLength) {
+            CGFloat offset = horizontalEmptyLength - self.contentViewRightConstraint.constant;
+            self.contentViewRightConstraint.constant += offset;
+            self.contentViewLeftConstraint.constant += offset;
         }
     }
     
-    if (actualPhotoHeight < viewHeight && self.photoHeightRate != 1.0) {
-        CGFloat yPadding = (imageViewHeight - viewHeight)/2.0;
-        self.imageViewTopConstraint.constant = -yPadding;
-        self.imageViewBottomConstraint.constant = yPadding;
-    }else {
-        CGFloat verticalEmptyLength = imageViewHeight * (1.0 - self.photoHeightRate)/2.0;
-        if (self.imageViewTopConstraint.constant > -verticalEmptyLength) {
-            CGFloat offset = -verticalEmptyLength - self.imageViewTopConstraint.constant;
-            self.imageViewTopConstraint.constant += offset;
-            self.imageViewBottomConstraint.constant += offset;
-        }else if (self.imageViewBottomConstraint.constant < verticalEmptyLength) {
-            CGFloat offset = verticalEmptyLength - self.imageViewBottomConstraint.constant;
-            self.imageViewTopConstraint.constant += offset;
-            self.imageViewBottomConstraint.constant += offset;
+    if (actualPhotoHeight < viewHeight && self.contentHeightRatio != 1.0) {
+        CGFloat yPadding = (contentViewHeight - viewHeight)/2.0;
+        self.contentViewTopConstraint.constant = -yPadding;
+        self.contentViewBottomConstraint.constant = yPadding;
+    } else {
+        CGFloat verticalEmptyLength = contentViewHeight * (1.0 - self.contentHeightRatio) / 2.0;
+        if (self.contentViewTopConstraint.constant > -verticalEmptyLength) {
+            CGFloat offset = -verticalEmptyLength - self.contentViewTopConstraint.constant;
+            self.contentViewTopConstraint.constant += offset;
+            self.contentViewBottomConstraint.constant += offset;
+        }else if (self.contentViewBottomConstraint.constant < verticalEmptyLength) {
+            CGFloat offset = verticalEmptyLength - self.contentViewBottomConstraint.constant;
+            self.contentViewTopConstraint.constant += offset;
+            self.contentViewBottomConstraint.constant += offset;
         }
     }
     
     [self layoutIfNeeded];
 }
-
-#pragma mark - image view
-- (UIImageView *)imageView
-{
-    if (!_imageView) {
-        _imageView = [[UIImageView alloc] init];
-        _imageView.contentMode = UIViewContentModeScaleAspectFit;
-    }
-    
-    return _imageView;
-}
-
-- (void)initImageView
-{
-    [self addSubview:self.imageView];
-    
-    self.imageView.translatesAutoresizingMaskIntoConstraints = NO;
-    
-    self.imageViewLeftConstraint = [NSLayoutConstraint constraintWithItem:self.imageView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeft multiplier:1.0 constant:0];
-    [self addConstraint:self.imageViewLeftConstraint];
-    
-    self.imageViewRightConstraint = [NSLayoutConstraint constraintWithItem:self.imageView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeRight multiplier:1.0 constant:0];
-    [self addConstraint:self.imageViewRightConstraint];
-    
-    self.imageViewTopConstraint = [NSLayoutConstraint constraintWithItem:self.imageView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1.0 constant:0];
-    [self addConstraint:self.imageViewTopConstraint];
-    
-    self.imageViewBottomConstraint = [NSLayoutConstraint constraintWithItem:self.imageView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0];
-    [self addConstraint:self.imageViewBottomConstraint];
-}
-
-#pragma mark - loading indicator
-- (UIActivityIndicatorView *)loadingIndicator
-{
-    if (!_loadingIndicator) {
-        _loadingIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-        _loadingIndicator.hidesWhenStopped = YES;
-    }
-    
-    return _loadingIndicator;
-}
-
-- (void)initLoadingIndicator
-{
-    [self addSubview:self.loadingIndicator];
-    
-    self.loadingIndicator.translatesAutoresizingMaskIntoConstraints = NO;
-    
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.loadingIndicator attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0]];
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.loadingIndicator attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0]];
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.loadingIndicator attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:50]];
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.loadingIndicator attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:50]];
-}
-#pragma mark -
 
 @end

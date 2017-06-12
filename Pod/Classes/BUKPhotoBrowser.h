@@ -1,21 +1,25 @@
 //
 //  BUKPhotoBrowser.h
-//  Pods
+//  BUKPhotoBrowser
 //
 //  Created by hyice on 15/8/11.
-//
+//  Copyright (c) 2015 - 2017 Baixing, Inc. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import "BUKPhoto.h"
 
 @class BUKPhotoBrowser;
+@protocol BUKPhotoContentView;
 
 @protocol BUKPhotoBrowserDataSource <NSObject>
 
 @required
 - (NSInteger)buk_numberOfPhotosForBrowser:(BUKPhotoBrowser *)browser;
 - (BUKPhoto *)buk_photoBrowser:(BUKPhotoBrowser *)browser photoAtIndex:(NSUInteger)index;
+
+@optional
+- (UIView<BUKPhotoContentView> *)buk_photoBrowser:(BUKPhotoBrowser *)browser contentViewForPhoto:(BUKPhoto *)photo atIndex:(NSInteger)index;
 
 @end
 

@@ -1,14 +1,12 @@
 //
 //  BUKPhotoView.h
-//  Pods
+//  BUKPhotoBrowser
 //
 //  Created by hyice on 15/8/11.
-//
+//  Copyright (c) 2015 - 2017 Baixing, Inc. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-
-@class BUKPhoto;
 
 typedef NS_ENUM(NSInteger, BUKPhotoViewOverflowDirection) {
     BUKPhotoViewOverflowLeftDirection,
@@ -17,12 +15,16 @@ typedef NS_ENUM(NSInteger, BUKPhotoViewOverflowDirection) {
     BUKPhotoViewOverflowBottomDirection
 };
 
+@class BUKPhoto;
+@protocol BUKPhotoContentView;
+
 @interface BUKPhotoView : UIView
 
+@property (nonatomic) UIView<BUKPhotoContentView> *contentView;
+
 - (void)setupViewWithPhoto:(BUKPhoto *)photo;
-
+- (void)adjustWithContentSize:(CGSize)size;
 - (void)translateImage:(CGPoint)translation animated:(BOOL)animated;
-
-- (CGFloat)imageOverflowLengthForDirection:(BUKPhotoViewOverflowDirection)direction;
+- (CGFloat)contentOverflowLengthForDirection:(BUKPhotoViewOverflowDirection)direction;
 
 @end

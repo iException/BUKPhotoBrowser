@@ -1,9 +1,9 @@
 //
 //  BUKPhoto.m
-//  Pods
+//  BUKPhotoBrowser
 //
 //  Created by hyice on 15/8/11.
-//
+//  Copyright (c) 2015 - 2017 Baixing, Inc. All rights reserved.
 //
 
 #import "BUKPhoto.h"
