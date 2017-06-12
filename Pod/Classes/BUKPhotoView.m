@@ -41,10 +41,10 @@
     [_contentView removeFromSuperview];
     _contentView = contentView;
     _contentView.translatesAutoresizingMaskIntoConstraints = NO;
-    [_contentView setPhoto:self.photo withPhotoView:self];
     [self addSubview:_contentView];
     [self setupViewConstraints];
     [self setupGestureRecognizer];
+    [_contentView setPhoto:self.photo withPhotoView:self];
 }
 
 
@@ -53,6 +53,7 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
         self.clipsToBounds = YES;
+        [self adjustWithContentSize:frame.size];
     }
     return self;
 }

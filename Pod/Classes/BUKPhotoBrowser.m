@@ -216,7 +216,10 @@ static const CGFloat kBUKViewPadding = 10;
     BUKPhoto *photo = [self buk_photoForIndex:index];
     BUKPhotoView *photoView = [[BUKPhotoView alloc] initWithFrame:[self buk_photoViewFrameAtIndex:index]];
     if ([self.buk_dataSource respondsToSelector:@selector(buk_photoBrowser:contentViewForPhoto:atIndex:)]) {
-        photoView.contentView = [self.buk_dataSource buk_photoBrowser:self contentViewForPhoto:photo atIndex:index];
+        UIView<BUKPhotoContentView> *contentView = [self.buk_dataSource buk_photoBrowser:self contentViewForPhoto:photo atIndex:index];
+        if (contentView) {
+            photoView.contentView = contentView;
+        }
     }
     
     [photoView setupViewWithPhoto:photo];
