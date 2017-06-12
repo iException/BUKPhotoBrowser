@@ -1,6 +1,6 @@
 PODS:
-  - BUKPhotoBrowser (1.0.0):
-    - SDWebImage (= 3.7.2)
+  - BUKPhotoBrowser (1.0.2):
+    - SDWebImage (~> 3.7)
   - SDWebImage (3.7.2):
     - SDWebImage/Core (= 3.7.2)
   - SDWebImage/Core (3.7.2)
@@ -13,7 +13,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BUKPhotoBrowser: 5a0eea12030e98c0509b92ebc32c80288e3ca4f3
+  BUKPhotoBrowser: a8bbd0d684a76db21482d05fa036d3b2d0d8e9b9
   SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
 
-COCOAPODS: 0.37.2
+PODFILE CHECKSUM: 0a310dfe5f209112d8f527a11b6262f27f850c43
+
+COCOAPODS: 1.2.1
