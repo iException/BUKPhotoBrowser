@@ -6,9 +6,13 @@ for special usage.
 
 ## Usage
 
-Download the code and rea
+See the example project for details.
+
 
 ## Requirements
+
+* iOS 7 and later
+
 
 ## Installation
 

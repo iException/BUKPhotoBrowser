@@ -1,9 +1,9 @@
 PODS:
-  - BUKPhotoBrowser (1.0.2):
-    - SDWebImage (~> 3.7)
-  - SDWebImage (3.7.2):
-    - SDWebImage/Core (= 3.7.2)
-  - SDWebImage/Core (3.7.2)
+  - BUKPhotoBrowser (1.1.0):
+    - SDWebImage (~> 4.0)
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
 
 DEPENDENCIES:
   - BUKPhotoBrowser (from `../`)
@@ -13,8 +13,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BUKPhotoBrowser: a8bbd0d684a76db21482d05fa036d3b2d0d8e9b9
-  SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
+  BUKPhotoBrowser: 80433f2913bb44e4eda38389b8a20e68ca2a6e55
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
 
 PODFILE CHECKSUM: 0a310dfe5f209112d8f527a11b6262f27f850c43
 

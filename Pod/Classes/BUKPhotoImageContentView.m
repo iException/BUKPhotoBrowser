@@ -88,12 +88,14 @@
     }
 
     [self.activityIndicatorView startAnimating];
-    [photo getPhoto:^(UIImage *image, CGFloat progress) {
-        [self.imageView setImage:image];
+    __weak typeof(self)weakSelf = self;
 
-        if (progress >= 1.0) {
+    [photo getPhoto:^(UIImage *image, CGFloat progress) {
+        __strong __typeof(weakSelf)strongSelf = weakSelf;
+        if (image) {
             [photoView adjustWithContentSize:image.size];
-            [self.activityIndicatorView stopAnimating];
+            [strongSelf.imageView setImage:image];
+            [strongSelf.activityIndicatorView stopAnimating];
         }
     }];
 }

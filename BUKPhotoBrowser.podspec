@@ -11,11 +11,11 @@ Pod::Spec.new do |s|
   s.license          = 'MIT'
   s.author           = { "hyice" => "hy_ice719@163.com" }
   s.source           = { :git => "https://github.com/iException/BUKPhotoBrowser.git", :tag => "v#{s.version.to_s}" }
-  s.platform         = :ios, '8.0'
+  s.platform         = :ios, '7.0'
   s.requires_arc     = true
   s.source_files     = 'Pod/Classes/**/*'
   s.resource_bundles = {
     'BUKPhotoBrowser' => ['Pod/Assets/*.png']
   }
-  s.dependency 'SDWebImage', '~> 3.7'
+  s.dependency 'SDWebImage', '~> 4.0'
 end

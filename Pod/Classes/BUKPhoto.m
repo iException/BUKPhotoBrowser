@@ -75,12 +75,15 @@
     }
     
     __block CGFloat progress = 0;
-    [[SDWebImageManager sharedManager] downloadImageWithURL:self.photoUrl options:SDWebImageProgressiveDownload progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+    __weak typeof(self)weakSelf = self;
+    [[SDWebImageManager sharedManager] loadImageWithURL:self.photoUrl options:SDWebImageProgressiveDownload progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
         progress = receivedSize * 1.0 / expectedSize;
-    } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+        handler(nil, progress);
+    } completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, SDImageCacheType cacheType, BOOL finished, NSURL * _Nullable imageURL) {
+        __strong __typeof(weakSelf)strongSelf = weakSelf;
         if (finished) {
             progress = 1.0;
-            self.photo = image;
+            strongSelf.photo = image;
         }
         handler(image, progress);
     }];
