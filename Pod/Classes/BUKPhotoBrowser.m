@@ -221,6 +221,10 @@ static const CGFloat kBUKViewPadding = 10;
             photoView.contentView = contentView;
         }
     }
+
+    if ([self.delegate respondsToSelector:@selector(buk_photoBrowser:shouldEnablePinchForPhotoAtIndex:)]) {
+        photoView.pinchEnabled = [self.delegate buk_photoBrowser:self shouldEnablePinchForPhotoAtIndex:index];
+    }
     
     [photoView setupViewWithPhoto:photo];
     

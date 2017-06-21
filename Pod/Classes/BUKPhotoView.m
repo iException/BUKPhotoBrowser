@@ -52,6 +52,7 @@
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
+        _pinchEnabled = YES;
         self.clipsToBounds = YES;
         [self adjustWithContentSize:frame.size];
     }
@@ -62,6 +63,10 @@
 #pragma mark - Actions
 
 - (void)pinch:(UIPinchGestureRecognizer *)pinch {
+    if (!self.pinchEnabled) {
+        return;
+    }
+
     CGPoint center = [pinch locationInView:self.contentView];
     [self scaleContentView:pinch.scale center:center];
 

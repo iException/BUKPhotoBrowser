@@ -21,6 +21,7 @@ typedef NS_ENUM(NSInteger, BUKPhotoViewOverflowDirection) {
 @interface BUKPhotoView : UIView
 
 @property (nonatomic) UIView<BUKPhotoContentView> *contentView;
+@property (nonatomic) BOOL pinchEnabled;
 
 - (void)setupViewWithPhoto:(BUKPhoto *)photo;
 - (void)adjustWithContentSize:(CGSize)size;
