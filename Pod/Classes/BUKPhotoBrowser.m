@@ -11,7 +11,7 @@
 
 static const CGFloat kBUKViewPadding = 10;
 
-@interface BUKPhotoBrowser ()
+@interface BUKPhotoBrowser () <UIGestureRecognizerDelegate>
 
 @property (assign, nonatomic) NSInteger currentIndex;
 
@@ -376,6 +376,14 @@ static const CGFloat kBUKViewPadding = 10;
     return CGPointMake(leftX * (toLeft? -1 : 1), leftY * (toTop? -1 : 1));
 }
 
+#pragma mark - UIGestureRecognizerDelegate
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
+{
+    // prevent recognizing touches on the slider
+    return ![touch.view isKindOfClass:[UISlider class]];
+}
+
 #pragma mark - setters -
 - (void)setShowNavigationBar:(BOOL)showNavigationBar
 {
@@ -415,6 +423,7 @@ static const CGFloat kBUKViewPadding = 10;
 - (UIPanGestureRecognizer *)buk_panGesture
 {
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(buk_panned:)];
+    pan.delegate = self;
     return pan;
 }
 
